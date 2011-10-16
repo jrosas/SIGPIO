@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.EstudianteSc" table="estudiante_sc" schema="public">
+        <id name="carnet" type="string">
+            <column name="carnet" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombres" type="string">
+            <column name="nombres" length="25" />
+        </property>
+        <property name="apellidos" type="string">
+            <column name="apellidos" length="25" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="telefonos" type="string">
+            <column name="telefonos" length="35" />
+        </property>
+        <property name="horasCumplidas" type="java.lang.Integer">
+            <column name="horas_cumplidas" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="charlaPlantels" inverse="true">
+            <key>
+                <column name="estudiante" length="10" not-null="true" />
+            </key>
+            <one-to-many class="pojo.CharlaPlantel" />
+        </set>
+    </class>
+</hibernate-mapping>

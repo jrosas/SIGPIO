@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Profesor" table="profesor" schema="public">
+        <id name="cedula" type="string">
+            <column name="cedula" length="11" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usuario" class="pojo.Usuario" update="false" insert="false" fetch="select">
+            <column name="cedula" length="11" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="fechaIngreso" type="date">
+            <column name="fecha_ingreso" length="13" />
+        </property>
+        <property name="cargo" type="string">
+            <column name="cargo" length="10" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="profesorMaterias" inverse="true">
+            <key>
+                <column name="cedula" length="11" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="pojo.ProfesorMateria" />
+        </set>
+        <set name="clases" inverse="true">
+            <key>
+                <column name="profesor" length="11" />
+            </key>
+            <one-to-many class="pojo.Clase" />
+        </set>
+    </class>
+</hibernate-mapping>

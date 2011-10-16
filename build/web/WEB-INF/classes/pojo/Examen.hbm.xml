@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Examen" table="examen" schema="public">
+        <id name="codigo" type="string">
+            <column name="codigo" length="18" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="aula" class="pojo.Aula" fetch="select">
+            <column name="aula" length="38" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="fecha" length="13" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="25" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="examenAsistens" inverse="true">
+            <key>
+                <column name="examen" length="18" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ExamenAsisten" />
+        </set>
+        <set name="examenApoyos" inverse="true">
+            <key>
+                <column name="examen" length="18" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ExamenApoyo" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Clase" table="clase" schema="public">
+        <id name="codigo" type="string">
+            <column name="codigo" length="9" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="profesor" class="pojo.Profesor" fetch="select">
+            <column name="profesor" length="11" />
+        </many-to-one>
+        <many-to-one name="aula" class="pojo.Aula" fetch="select">
+            <column name="aula" length="38" />
+        </many-to-one>
+        <many-to-one name="catedra" class="pojo.Catedra" fetch="select">
+            <column name="catedra" length="10" />
+        </many-to-one>
+        <property name="periodo" type="string">
+            <column name="periodo" length="12" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="claseEstudiantes" inverse="true">
+            <key>
+                <column name="clase" length="9" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ClaseEstudiante" />
+        </set>
+    </class>
+</hibernate-mapping>

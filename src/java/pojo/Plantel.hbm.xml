@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Plantel" table="plantel" schema="public">
+        <id name="rif" type="string">
+            <column name="rif" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="70" />
+        </property>
+        <property name="distrito" type="string">
+            <column name="distrito" length="30" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="12" />
+        </property>
+        <property name="telefonos" type="string">
+            <column name="telefonos" length="47" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="140" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="30" />
+        </property>
+        <property name="coordinadorPio" type="string">
+            <column name="coordinador_pio" length="11" />
+        </property>
+        <property name="director" type="string">
+            <column name="director" length="11" />
+        </property>
+        <property name="menciones" type="string">
+            <column name="menciones" length="100" />
+        </property>
+        <property name="materiasFalla" type="string">
+            <column name="materias_falla" length="100" />
+        </property>
+        <property name="programasRemit" type="string">
+            <column name="programas_remit" length="100" />
+        </property>
+        <property name="danosPlanta" type="string">
+            <column name="danos_planta" length="200" />
+        </property>
+        <property name="matricula" type="java.lang.Integer">
+            <column name="matricula" />
+        </property>
+        <property name="casosEmbarazo" type="java.lang.Integer">
+            <column name="casos_embarazo" />
+        </property>
+        <property name="asistioCharla" type="java.lang.Boolean">
+            <column name="asistio_charla" />
+        </property>
+        <property name="orientacionFam" type="java.lang.Boolean">
+            <column name="orientacion_fam" />
+        </property>
+        <property name="orientacionInd" type="java.lang.Boolean">
+            <column name="orientacion_ind" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="violenciaPlantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="pojo.ViolenciaPlantel" />
+        </set>
+        <set name="aspirantes" inverse="true">
+            <key>
+                <column name="plantel" length="12" />
+            </key>
+            <one-to-many class="pojo.Aspirante" />
+        </set>
+        <set name="charlaPlantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" not-null="true" />
+            </key>
+            <one-to-many class="pojo.CharlaPlantel" />
+        </set>
+    </class>
+</hibernate-mapping>

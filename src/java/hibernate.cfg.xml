@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/piodb</property>
+    <property name="hibernate.connection.username">pio</property>
+    <property name="hibernate.connection.password">P10p@55</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="pojo/Usuario.hbm.xml"/>
+    <mapping resource="pojo/Edificio.hbm.xml"/>
+    <mapping resource="pojo/Aula.hbm.xml"/>
+    <mapping resource="pojo/Profesor.hbm.xml"/>
+    <mapping resource="pojo/ViolenciaPlantel.hbm.xml"/>
+    <mapping resource="pojo/Examen.hbm.xml"/>
+    <mapping resource="pojo/CharlaPlantel.hbm.xml"/>
+    <mapping resource="pojo/PreinscritoCarrera.hbm.xml"/>
+    <mapping resource="pojo/Plantel.hbm.xml"/>
+    <mapping resource="pojo/Catedra.hbm.xml"/>
+    <mapping resource="pojo/EstudianteRepresentante.hbm.xml"/>
+    <mapping resource="pojo/ProfesorMateria.hbm.xml"/>
+    <mapping resource="pojo/ExamenAsisten.hbm.xml"/>
+    <mapping resource="pojo/PersonalApoyo.hbm.xml"/>
+    <mapping resource="pojo/Proveedor.hbm.xml"/>
+    <mapping resource="pojo/EstudianteSc.hbm.xml"/>
+    <mapping resource="pojo/ExamenApoyo.hbm.xml"/>
+    <mapping resource="pojo/ProveedoresEvento.hbm.xml"/>
+    <mapping resource="pojo/PersonalPio.hbm.xml"/>
+    <mapping resource="pojo/Evento.hbm.xml"/>
+    <mapping resource="pojo/Preinscrito.hbm.xml"/>
+    <mapping resource="pojo/Estudiante.hbm.xml"/>
+    <mapping resource="pojo/Carrera.hbm.xml"/>
+    <mapping resource="pojo/ClaseEstudiante.hbm.xml"/>
+    <mapping resource="pojo/Mensaje.hbm.xml"/>
+    <mapping resource="pojo/Clase.hbm.xml"/>
+    <mapping resource="pojo/Representante.hbm.xml"/>
+    <mapping resource="pojo/Aspirante.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
