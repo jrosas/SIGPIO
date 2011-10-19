@@ -7,6 +7,10 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="RegistrarseAspRepActionForm" type="forms.RegistrarseAspRepActionForm"/>
+        <form-bean name="RegistrarseAspActionForm" type="forms.RegistrarseAspActionForm"/>
+        <form-bean name="RegistrarseActionForm" type="forms.RegistrarseActionForm"/>
+        <form-bean name="LoginActionForm" type="forms.LoginActionForm"/>
     
     </form-beans>
     
@@ -15,12 +19,33 @@
     </global-exceptions>
 
     <global-forwards>
-        <forward name="welcome"  path="/Welcome.do"/>
+        
     </global-forwards>
 
     <action-mappings>
-        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action path="/Login" name="LoginActionForm" input="/LoginUsuario/Login.jsp" scope="session" type="actions.LoginAction">
+        <forward name="exito" path="/LoginUsuario/Exito.jsp"/>
+        <forward name="fail" path="/LoginUsuario/Fallo.jsp"/>
+        </action>
+        
+        
+        <action path="/Registrarse" name="RegistrarseActionForm" input="/LoginUsuario/Registrarse.jsp" 
+        scope="session" type="actions.RegistrarseAction">
+        <forward name="success" path="/LoginUsuario/Login.jsp"/>
+        </action>
+        
+        <action path="/RegistrarseAsp" name="RegistrarseAspActionForm" input="/LoginUsuario/RegistrarseAsp.jsp" scope="session" 
+        type="actions.RegistrarseAspAction">
+        <forward name="bien" path="/LoginUsuario/Exito.jsp"/>
+        </action>
+        
+        <action input="/LoginUsuario/RegistrarseAspRep.jsp" name="RegistrarseAspRepActionForm" 
+        path="/RegistrarseAspRep" scope="session" type="actions.RegistrarseAspRepAction">
+        <forward name="bueno" path="/LoginUsuario/Exito.jsp"/>
+        </action>
+          
     </action-mappings>
+    
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 

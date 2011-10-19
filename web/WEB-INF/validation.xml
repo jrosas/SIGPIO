@@ -24,20 +24,21 @@
     <formset>
 
         <!-- An example form -->
-        <form name="logonForm">
+        <form name="LoginActionForm">
             <field
-                property="username"
-                depends="required">
-                    <arg key="logonForm.username"/>
-            </field>
-            <field
-                property="password"
+                property="email"
                 depends="required,mask">
-                    <arg key="logonForm.password"/>
+                    <arg key="Login.email"/>
                     <var>
                         <var-name>mask</var-name>
-                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                        <var-value>^\b[a-zA-Z0-9%+-_.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b$</var-value>
+                    
                     </var>
+            </field>
+            <field
+                property="clave"
+                depends="required">
+                    <arg key="Login.clave"/>
             </field>
         </form>
 
