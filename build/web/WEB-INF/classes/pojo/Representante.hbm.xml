@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Representante" table="representante" schema="public">
         <id name="cedula" type="string">
@@ -9,13 +9,13 @@
             <generator class="assigned" />
         </id>
         <property name="nombres" type="string">
-            <column name="nombres" length="25" />
+            <column name="nombres" length="25" not-null="true" />
         </property>
         <property name="apellidos" type="string">
-            <column name="apellidos" length="25" />
+            <column name="apellidos" length="25" not-null="true" />
         </property>
-        <property name="lugarTrabajo" type="string">
-            <column name="lugar_trabajo" length="20" />
+        <property name="lugartrabajo" type="string">
+            <column name="lugartrabajo" length="20" />
         </property>
         <property name="telefonos" type="string">
             <column name="telefonos" length="35" />
@@ -23,17 +23,17 @@
         <property name="direccion" type="string">
             <column name="direccion" length="140" />
         </property>
-        <property name="gradoEstudio" type="string">
-            <column name="grado_estudio" length="30" />
+        <property name="gradoestudio" type="string">
+            <column name="gradoestudio" length="30" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="estudianteRepresentantes" inverse="true">
+        <set name="estudianterepresentantes" inverse="true">
             <key>
-                <column name="representante" length="11" not-null="true" />
+                <column name="representante" length="11" />
             </key>
-            <one-to-many class="pojo.EstudianteRepresentante" />
+            <one-to-many class="pojo.Estudianterepresentante" />
         </set>
     </class>
 </hibernate-mapping>

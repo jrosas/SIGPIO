@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Aula" table="aula" schema="public">
         <id name="lugar" type="string">
@@ -17,12 +17,6 @@
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="examens" inverse="true">
-            <key>
-                <column name="aula" length="38" />
-            </key>
-            <one-to-many class="pojo.Examen" />
-        </set>
         <set name="clases" inverse="true">
             <key>
                 <column name="aula" length="38" />

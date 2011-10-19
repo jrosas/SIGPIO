@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -18,16 +18,18 @@ public class Proveedor  implements java.io.Serializable {
      private String direccion;
      private String telefonos;
      private Boolean borrado;
-     private Set<ProveedoresEvento> proveedoresEventos = new HashSet<ProveedoresEvento>(0);
+     private Set<Proveedoresevento> proveedoreseventos = new HashSet<Proveedoresevento>(0);
 
     public Proveedor() {
     }
 
 	
-    public Proveedor(String rif) {
+    public Proveedor(String rif, String nombre, String area) {
         this.rif = rif;
+        this.nombre = nombre;
+        this.area = area;
     }
-    public Proveedor(String rif, String nombre, String area, String email, String direccion, String telefonos, Boolean borrado, Set<ProveedoresEvento> proveedoresEventos) {
+    public Proveedor(String rif, String nombre, String area, String email, String direccion, String telefonos, Boolean borrado, Set<Proveedoresevento> proveedoreseventos) {
        this.rif = rif;
        this.nombre = nombre;
        this.area = area;
@@ -35,7 +37,7 @@ public class Proveedor  implements java.io.Serializable {
        this.direccion = direccion;
        this.telefonos = telefonos;
        this.borrado = borrado;
-       this.proveedoresEventos = proveedoresEventos;
+       this.proveedoreseventos = proveedoreseventos;
     }
    
     public String getRif() {
@@ -87,12 +89,12 @@ public class Proveedor  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ProveedoresEvento> getProveedoresEventos() {
-        return this.proveedoresEventos;
+    public Set<Proveedoresevento> getProveedoreseventos() {
+        return this.proveedoreseventos;
     }
     
-    public void setProveedoresEventos(Set<ProveedoresEvento> proveedoresEventos) {
-        this.proveedoresEventos = proveedoresEventos;
+    public void setProveedoreseventos(Set<Proveedoresevento> proveedoreseventos) {
+        this.proveedoreseventos = proveedoreseventos;
     }
 
 

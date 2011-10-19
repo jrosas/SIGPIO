@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,7 +15,6 @@ public class Aula  implements java.io.Serializable {
      private Integer capacidad;
      private String implementos;
      private Boolean borrado;
-     private Set<Examen> examens = new HashSet<Examen>(0);
      private Set<Clase> clases = new HashSet<Clase>(0);
 
     public Aula() {
@@ -25,12 +24,11 @@ public class Aula  implements java.io.Serializable {
     public Aula(String lugar) {
         this.lugar = lugar;
     }
-    public Aula(String lugar, Integer capacidad, String implementos, Boolean borrado, Set<Examen> examens, Set<Clase> clases) {
+    public Aula(String lugar, Integer capacidad, String implementos, Boolean borrado, Set<Clase> clases) {
        this.lugar = lugar;
        this.capacidad = capacidad;
        this.implementos = implementos;
        this.borrado = borrado;
-       this.examens = examens;
        this.clases = clases;
     }
    
@@ -61,13 +59,6 @@ public class Aula  implements java.io.Serializable {
     
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
-    }
-    public Set<Examen> getExamens() {
-        return this.examens;
-    }
-    
-    public void setExamens(Set<Examen> examens) {
-        this.examens = examens;
     }
     public Set<Clase> getClases() {
         return this.clases;

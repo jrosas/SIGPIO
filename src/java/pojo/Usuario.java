@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,12 +15,13 @@ public class Usuario  implements java.io.Serializable {
      private String nombres;
      private String apellidos;
      private String email;
-     private Boolean esAdmin;
-     private Date fechaRegistro;
+     private String clave;
+     private boolean esadmin;
+     private String fecharegistro;
      private String telefonos;
      private Boolean borrado;
      private Set<Profesor> profesors = new HashSet<Profesor>(0);
-     private Set<PersonalPio> personalPios = new HashSet<PersonalPio>(0);
+     private Set<Personalpio> personalpios = new HashSet<Personalpio>(0);
      private Set<Mensaje> mensajes = new HashSet<Mensaje>(0);
      private Set<Aspirante> aspirantes = new HashSet<Aspirante>(0);
 
@@ -29,20 +29,25 @@ public class Usuario  implements java.io.Serializable {
     }
 
 	
-    public Usuario(String cedula) {
+    public Usuario(String cedula, String nombres, String apellidos, String clave, boolean esadmin) {
         this.cedula = cedula;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.clave = clave;
+        this.esadmin = esadmin;
     }
-    public Usuario(String cedula, String nombres, String apellidos, String email, Boolean esAdmin, Date fechaRegistro, String telefonos, Boolean borrado, Set<Profesor> profesors, Set<PersonalPio> personalPios, Set<Mensaje> mensajes, Set<Aspirante> aspirantes) {
+    public Usuario(String cedula, String nombres, String apellidos, String email, String clave, boolean esadmin, String fecharegistro, String telefonos, Boolean borrado, Set<Profesor> profesors, Set<Personalpio> personalpios, Set<Mensaje> mensajes, Set<Aspirante> aspirantes) {
        this.cedula = cedula;
        this.nombres = nombres;
        this.apellidos = apellidos;
        this.email = email;
-       this.esAdmin = esAdmin;
-       this.fechaRegistro = fechaRegistro;
+       this.clave = clave;
+       this.esadmin = esadmin;
+       this.fecharegistro = fecharegistro;
        this.telefonos = telefonos;
        this.borrado = borrado;
        this.profesors = profesors;
-       this.personalPios = personalPios;
+       this.personalpios = personalpios;
        this.mensajes = mensajes;
        this.aspirantes = aspirantes;
     }
@@ -75,19 +80,26 @@ public class Usuario  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public Boolean getEsAdmin() {
-        return this.esAdmin;
+    public String getClave() {
+        return this.clave;
     }
     
-    public void setEsAdmin(Boolean esAdmin) {
-        this.esAdmin = esAdmin;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
-    public Date getFechaRegistro() {
-        return this.fechaRegistro;
+    public boolean isEsadmin() {
+        return this.esadmin;
     }
     
-    public void setFechaRegistro(Date fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
+    public void setEsadmin(boolean esadmin) {
+        this.esadmin = esadmin;
+    }
+    public String getFecharegistro() {
+        return this.fecharegistro;
+    }
+    
+    public void setFecharegistro(String fecharegistro) {
+        this.fecharegistro = fecharegistro;
     }
     public String getTelefonos() {
         return this.telefonos;
@@ -110,12 +122,12 @@ public class Usuario  implements java.io.Serializable {
     public void setProfesors(Set<Profesor> profesors) {
         this.profesors = profesors;
     }
-    public Set<PersonalPio> getPersonalPios() {
-        return this.personalPios;
+    public Set<Personalpio> getPersonalpios() {
+        return this.personalpios;
     }
     
-    public void setPersonalPios(Set<PersonalPio> personalPios) {
-        this.personalPios = personalPios;
+    public void setPersonalpios(Set<Personalpio> personalpios) {
+        this.personalpios = personalpios;
     }
     public Set<Mensaje> getMensajes() {
         return this.mensajes;

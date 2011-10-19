@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Estudiante" table="estudiante" schema="public">
         <id name="cedula" type="string">
@@ -11,20 +11,20 @@
         <many-to-one name="preinscrito" class="pojo.Preinscrito" update="false" insert="false" fetch="select">
             <column name="cedula" length="11" not-null="true" unique="true" />
         </many-to-one>
-        <property name="numeroIns" type="string">
-            <column name="numero_ins" length="30" />
+        <property name="numeroins" type="string">
+            <column name="numeroins" length="30" />
         </property>
-        <property name="fechaIns" type="date">
-            <column name="fecha_ins" length="13" />
+        <property name="fechains" type="string">
+            <column name="fechains" length="11" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="claseEstudiantes" inverse="true">
+        <set name="claseestudiantes" inverse="true">
             <key>
-                <column name="estudiante" length="11" not-null="true" />
+                <column name="estudiante" length="11" />
             </key>
-            <one-to-many class="pojo.ClaseEstudiante" />
+            <one-to-many class="pojo.Claseestudiante" />
         </set>
     </class>
 </hibernate-mapping>

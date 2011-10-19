@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -14,30 +14,32 @@ public class Representante  implements java.io.Serializable {
      private String cedula;
      private String nombres;
      private String apellidos;
-     private String lugarTrabajo;
+     private String lugartrabajo;
      private String telefonos;
      private String direccion;
-     private String gradoEstudio;
+     private String gradoestudio;
      private Boolean borrado;
-     private Set<EstudianteRepresentante> estudianteRepresentantes = new HashSet<EstudianteRepresentante>(0);
+     
 
     public Representante() {
     }
 
 	
-    public Representante(String cedula) {
+    public Representante(String cedula, String nombres, String apellidos) {
         this.cedula = cedula;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
     }
-    public Representante(String cedula, String nombres, String apellidos, String lugarTrabajo, String telefonos, String direccion, String gradoEstudio, Boolean borrado, Set<EstudianteRepresentante> estudianteRepresentantes) {
+    public Representante(String cedula, String nombres, String apellidos, String lugartrabajo, String telefonos, String direccion, String gradoestudio, Boolean borrado) {
        this.cedula = cedula;
        this.nombres = nombres;
        this.apellidos = apellidos;
-       this.lugarTrabajo = lugarTrabajo;
+       this.lugartrabajo = lugartrabajo;
        this.telefonos = telefonos;
        this.direccion = direccion;
-       this.gradoEstudio = gradoEstudio;
+       this.gradoestudio = gradoestudio;
        this.borrado = borrado;
-       this.estudianteRepresentantes = estudianteRepresentantes;
+       
     }
    
     public String getCedula() {
@@ -61,12 +63,12 @@ public class Representante  implements java.io.Serializable {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-    public String getLugarTrabajo() {
-        return this.lugarTrabajo;
+    public String getLugartrabajo() {
+        return this.lugartrabajo;
     }
     
-    public void setLugarTrabajo(String lugarTrabajo) {
-        this.lugarTrabajo = lugarTrabajo;
+    public void setLugartrabajo(String lugartrabajo) {
+        this.lugartrabajo = lugartrabajo;
     }
     public String getTelefonos() {
         return this.telefonos;
@@ -82,12 +84,12 @@ public class Representante  implements java.io.Serializable {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    public String getGradoEstudio() {
-        return this.gradoEstudio;
+    public String getGradoestudio() {
+        return this.gradoestudio;
     }
     
-    public void setGradoEstudio(String gradoEstudio) {
-        this.gradoEstudio = gradoEstudio;
+    public void setGradoestudio(String gradoestudio) {
+        this.gradoestudio = gradoestudio;
     }
     public Boolean getBorrado() {
         return this.borrado;
@@ -96,13 +98,7 @@ public class Representante  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<EstudianteRepresentante> getEstudianteRepresentantes() {
-        return this.estudianteRepresentantes;
-    }
     
-    public void setEstudianteRepresentantes(Set<EstudianteRepresentante> estudianteRepresentantes) {
-        this.estudianteRepresentantes = estudianteRepresentantes;
-    }
 
 
 

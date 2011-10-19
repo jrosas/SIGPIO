@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 
@@ -9,10 +9,11 @@ package pojo;
 public class Mensaje  implements java.io.Serializable {
 
 
-     private MensajeId id;
-     private PersonalPio personalPio;
+     private int idmensaje;
      private Usuario usuario;
-     private Boolean leido;
+     private String fecha;
+     private String contenido;
+     private Boolean procesado;
      private String asunto;
      private Boolean borrado;
 
@@ -20,32 +21,25 @@ public class Mensaje  implements java.io.Serializable {
     }
 
 	
-    public Mensaje(MensajeId id, Usuario usuario) {
-        this.id = id;
-        this.usuario = usuario;
+    public Mensaje(int idmensaje) {
+        this.idmensaje = idmensaje;
     }
-    public Mensaje(MensajeId id, PersonalPio personalPio, Usuario usuario, Boolean leido, String asunto, Boolean borrado) {
-       this.id = id;
-       this.personalPio = personalPio;
+    public Mensaje(int idmensaje, Usuario usuario, String fecha, String contenido, Boolean procesado, String asunto, Boolean borrado) {
+       this.idmensaje = idmensaje;
        this.usuario = usuario;
-       this.leido = leido;
+       this.fecha = fecha;
+       this.contenido = contenido;
+       this.procesado = procesado;
        this.asunto = asunto;
        this.borrado = borrado;
     }
    
-    public MensajeId getId() {
-        return this.id;
+    public int getIdmensaje() {
+        return this.idmensaje;
     }
     
-    public void setId(MensajeId id) {
-        this.id = id;
-    }
-    public PersonalPio getPersonalPio() {
-        return this.personalPio;
-    }
-    
-    public void setPersonalPio(PersonalPio personalPio) {
-        this.personalPio = personalPio;
+    public void setIdmensaje(int idmensaje) {
+        this.idmensaje = idmensaje;
     }
     public Usuario getUsuario() {
         return this.usuario;
@@ -54,12 +48,26 @@ public class Mensaje  implements java.io.Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    public Boolean getLeido() {
-        return this.leido;
+    public String getFecha() {
+        return this.fecha;
     }
     
-    public void setLeido(Boolean leido) {
-        this.leido = leido;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+    public String getContenido() {
+        return this.contenido;
+    }
+    
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+    public Boolean getProcesado() {
+        return this.procesado;
+    }
+    
+    public void setProcesado(Boolean procesado) {
+        this.procesado = procesado;
     }
     public String getAsunto() {
         return this.asunto;

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Plantel" table="plantel" schema="public">
         <id name="rif" type="string">
@@ -9,13 +9,13 @@
             <generator class="assigned" />
         </id>
         <property name="nombre" type="string">
-            <column name="nombre" length="70" />
+            <column name="nombre" length="70" not-null="true" />
         </property>
         <property name="distrito" type="string">
-            <column name="distrito" length="30" />
+            <column name="distrito" length="30" not-null="true" />
         </property>
         <property name="tipo" type="string">
-            <column name="tipo" length="12" />
+            <column name="tipo" length="12" not-null="true" />
         </property>
         <property name="telefonos" type="string">
             <column name="telefonos" length="47" />
@@ -26,47 +26,77 @@
         <property name="correo" type="string">
             <column name="correo" length="30" />
         </property>
-        <property name="coordinadorPio" type="string">
-            <column name="coordinador_pio" length="11" />
+        <property name="coordnombres" type="string">
+            <column name="coordnombres" length="25" not-null="true" />
         </property>
-        <property name="director" type="string">
-            <column name="director" length="11" />
+        <property name="coordapellidos" type="string">
+            <column name="coordapellidos" length="25" not-null="true" />
+        </property>
+        <property name="coordtelfs" type="string">
+            <column name="coordtelfs" length="35" not-null="true" />
+        </property>
+        <property name="coordemail" type="string">
+            <column name="coordemail" length="30" not-null="true" />
+        </property>
+        <property name="coordcedula" type="string">
+            <column name="coordcedula" length="11" not-null="true" />
+        </property>
+        <property name="direcnombres" type="string">
+            <column name="direcnombres" length="25" />
+        </property>
+        <property name="direcapellidos" type="string">
+            <column name="direcapellidos" length="25" />
+        </property>
+        <property name="directelfs" type="string">
+            <column name="directelfs" length="35" />
+        </property>
+        <property name="direcemail" type="string">
+            <column name="direcemail" length="30" />
+        </property>
+        <property name="direccedula" type="string">
+            <column name="direccedula" length="11" />
         </property>
         <property name="menciones" type="string">
-            <column name="menciones" length="100" />
+            <column name="menciones" length="100" not-null="true" />
         </property>
-        <property name="materiasFalla" type="string">
-            <column name="materias_falla" length="100" />
+        <property name="materiasfalla" type="string">
+            <column name="materiasfalla" length="100" />
         </property>
-        <property name="programasRemit" type="string">
-            <column name="programas_remit" length="100" />
+        <property name="programasremit" type="string">
+            <column name="programasremit" length="100" />
         </property>
-        <property name="danosPlanta" type="string">
-            <column name="danos_planta" length="200" />
+        <property name="danosplanta" type="string">
+            <column name="danosplanta" length="200" />
         </property>
         <property name="matricula" type="java.lang.Integer">
             <column name="matricula" />
         </property>
-        <property name="casosEmbarazo" type="java.lang.Integer">
-            <column name="casos_embarazo" />
+        <property name="casosembarazo" type="java.lang.Integer">
+            <column name="casosembarazo" />
         </property>
-        <property name="asistioCharla" type="java.lang.Boolean">
-            <column name="asistio_charla" />
+        <property name="asistiocharla" type="java.lang.Boolean">
+            <column name="asistiocharla" />
         </property>
-        <property name="orientacionFam" type="java.lang.Boolean">
-            <column name="orientacion_fam" />
+        <property name="orientacionfam" type="java.lang.Boolean">
+            <column name="orientacionfam" />
         </property>
-        <property name="orientacionInd" type="java.lang.Boolean">
-            <column name="orientacion_ind" />
+        <property name="orientacionind" type="java.lang.Boolean">
+            <column name="orientacionind" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="violenciaPlantels" inverse="true">
+        <set name="violenciaplantels" inverse="true">
             <key>
-                <column name="plantel" length="12" not-null="true" unique="true" />
+                <column name="plantel" length="12" />
             </key>
-            <one-to-many class="pojo.ViolenciaPlantel" />
+            <one-to-many class="pojo.Violenciaplantel" />
+        </set>
+        <set name="embarazoplantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" />
+            </key>
+            <one-to-many class="pojo.Embarazoplantel" />
         </set>
         <set name="aspirantes" inverse="true">
             <key>
@@ -74,11 +104,11 @@
             </key>
             <one-to-many class="pojo.Aspirante" />
         </set>
-        <set name="charlaPlantels" inverse="true">
+        <set name="charlaplantels" inverse="true">
             <key>
-                <column name="plantel" length="12" not-null="true" />
+                <column name="plantel" length="12" />
             </key>
-            <one-to-many class="pojo.CharlaPlantel" />
+            <one-to-many class="pojo.Charlaplantel" />
         </set>
     </class>
 </hibernate-mapping>

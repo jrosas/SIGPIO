@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Noticia" table="noticia" schema="public">
+        <id name="idnoticia" type="int">
+            <column name="idnoticia" />
+            <generator class="assigned" />
+        </id>
+        <property name="titulo" type="string">
+            <column name="titulo" length="26" />
+        </property>
+        <property name="contenido" type="string">
+            <column name="contenido" length="140" />
+        </property>
+        <property name="imagen" type="string">
+            <column name="imagen" length="60" />
+        </property>
+    </class>
+</hibernate-mapping>
