@@ -21,7 +21,7 @@
             <column name="procesado" />
         </property>
         <property name="asunto" type="string">
-            <column name="asunto" length="20" />
+            <column name="asunto" length="64" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />

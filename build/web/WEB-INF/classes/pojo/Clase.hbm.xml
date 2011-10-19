@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Clase" table="clase" schema="public">
         <id name="codigo" type="int">
             <column name="codigo" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="profesor" class="pojo.Profesor" fetch="select">
             <column name="profesor" length="11" />
@@ -17,8 +17,14 @@
         <many-to-one name="catedra" class="pojo.Catedra" fetch="select">
             <column name="catedra" length="10" />
         </many-to-one>
-        <property name="fecha" type="string">
-            <column name="fecha" length="13" />
+        <property name="dia" type="string">
+            <column name="dia" length="10" />
+        </property>
+        <property name="bloque" type="string">
+            <column name="bloque" length="18" />
+        </property>
+        <property name="valida" type="string">
+            <column name="valida" length="20" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />

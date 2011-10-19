@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Aspirante" table="aspirante" schema="public">
         <id name="cedula" type="string">
             <column name="cedula" length="11" />
-            <generator class="assigned" />
+            <generator class="foreign">
+                <param name="property">cedula</param>
+            </generator>  
         </id>
         <many-to-one name="plantel" class="pojo.Plantel" fetch="select">
             <column name="plantel" length="12" />
-        </many-to-one>
-        <many-to-one name="usuario" class="pojo.Usuario" update="false" insert="false" fetch="select">
-            <column name="cedula" length="11" not-null="true" unique="true" />
         </many-to-one>
         <property name="nivelingreso" type="string">
             <column name="nivelingreso" length="20" />
@@ -56,11 +55,6 @@
             </key>
             <one-to-many class="pojo.Estudianterepresentante" />
         </set>
-        <set name="preinscritos" inverse="true">
-            <key>
-                <column name="cedula" length="11" not-null="true" unique="true" />
-            </key>
-            <one-to-many class="pojo.Preinscrito" />
-        </set>
-    </class>
-</hibernate-mapping>
+        <one-to-one name="cedula" class="pojo.Usuario" constrained="true"/>
+        </class>
+    </hibernate-mapping>

@@ -11,7 +11,7 @@ import java.util.Set;
 public class Examen  implements java.io.Serializable {
 
 
-     private String codigo;
+     private int codigo;
      private Aula aula;
      private String fecha;
      private String tipo;
@@ -23,10 +23,10 @@ public class Examen  implements java.io.Serializable {
     }
 
 	
-    public Examen(String codigo) {
+    public Examen(int codigo) {
         this.codigo = codigo;
     }
-    public Examen(String codigo, Aula aula, String fecha, String tipo, Boolean borrado, Set<Examenasisten> examenasistens, Set<Examenapoyo> examenapoyos) {
+    public Examen(int codigo, Aula aula, String fecha, String tipo, Boolean borrado, Set<Examenasisten> examenasistens, Set<Examenapoyo> examenapoyos) {
        this.codigo = codigo;
        this.aula = aula;
        this.fecha = fecha;
@@ -36,11 +36,11 @@ public class Examen  implements java.io.Serializable {
        this.examenapoyos = examenapoyos;
     }
    
-    public String getCodigo() {
+    public int getCodigo() {
         return this.codigo;
     }
     
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
     public Aula getAula() {

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Plantel" table="plantel" schema="public">
         <id name="rif" type="string">
@@ -71,9 +71,6 @@
         <property name="matricula" type="java.lang.Integer">
             <column name="matricula" />
         </property>
-        <property name="casosembarazo" type="java.lang.Integer">
-            <column name="casosembarazo" />
-        </property>
         <property name="asistiocharla" type="java.lang.Boolean">
             <column name="asistiocharla" />
         </property>
@@ -88,13 +85,13 @@
         </property>
         <set name="violenciaplantels" inverse="true">
             <key>
-                <column name="plantel" length="12" />
+                <column name="plantel" length="12" not-null="true" unique="true" />
             </key>
             <one-to-many class="pojo.Violenciaplantel" />
         </set>
         <set name="embarazoplantels" inverse="true">
             <key>
-                <column name="plantel" length="12" />
+                <column name="plantel" length="12" not-null="true" unique="true" />
             </key>
             <one-to-many class="pojo.Embarazoplantel" />
         </set>

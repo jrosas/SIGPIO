@@ -4,9 +4,9 @@
 <!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Examen" table="examen" schema="public">
-        <id name="codigo" type="string">
-            <column name="codigo" length="18" />
-            <generator class="assigned" />
+        <id name="codigo" type="int">
+            <column name="codigo" />
+            <generator class="increment" />
         </id>
         <many-to-one name="aula" class="pojo.Aula" fetch="select">
             <column name="aula" length="38" />

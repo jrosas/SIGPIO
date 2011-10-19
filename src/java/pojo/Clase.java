@@ -15,7 +15,9 @@ public class Clase  implements java.io.Serializable {
      private Profesor profesor;
      private Aula aula;
      private Catedra catedra;
-     private String fecha;
+     private String dia;
+     private String bloque;
+     private String valida;
      private Boolean borrado;
      private Set<Claseestudiante> claseestudiantes = new HashSet<Claseestudiante>(0);
 
@@ -26,12 +28,14 @@ public class Clase  implements java.io.Serializable {
     public Clase(int codigo) {
         this.codigo = codigo;
     }
-    public Clase(int codigo, Profesor profesor, Aula aula, Catedra catedra, String fecha, Boolean borrado, Set<Claseestudiante> claseestudiantes) {
+    public Clase(int codigo, Profesor profesor, Aula aula, Catedra catedra, String dia, String bloque, String valida, Boolean borrado, Set<Claseestudiante> claseestudiantes) {
        this.codigo = codigo;
        this.profesor = profesor;
        this.aula = aula;
        this.catedra = catedra;
-       this.fecha = fecha;
+       this.dia = dia;
+       this.bloque = bloque;
+       this.valida = valida;
        this.borrado = borrado;
        this.claseestudiantes = claseestudiantes;
     }
@@ -64,13 +68,30 @@ public class Clase  implements java.io.Serializable {
     public void setCatedra(Catedra catedra) {
         this.catedra = catedra;
     }
-    public String getFecha() {
-        return this.fecha;
+    public String getDia() {
+        return this.dia;
     }
     
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDia(String dia) {
+        this.dia = dia;
     }
+
+    public String getBloque() {
+        return bloque;
+    }
+
+    public void setBloque(String bloque) {
+        this.bloque = bloque;
+    }
+
+    public String getValida() {
+        return valida;
+    }
+
+    public void setValida(String valida) {
+        this.valida = valida;
+    }
+    
     public Boolean getBorrado() {
         return this.borrado;
     }

@@ -240,7 +240,7 @@ CREATE TABLE mensaje (
        emisor        varchar(11),
        contenido     varchar(200),
        procesado     boolean DEFAULT false,
-       asunto        varchar(20),
+       asunto        varchar(64),
        borrado	     boolean DEFAULT false
        
 );
@@ -309,7 +309,7 @@ CREATE TABLE preinscritocarrera (
 -- XML SIN PROBLEMA
 CREATE TABLE examen (
 
-       codigo           varchar(18) PRIMARY KEY,
+       codigo           SERIAL PRIMARY KEY,
        fecha            varchar(11),
        aula             varchar(38),
        tipo             varchar(25),
@@ -321,9 +321,9 @@ CREATE TABLE examen (
 CREATE TABLE examenasisten (
 
        id    		SERIAL PRIMARY KEY,
-       examen           varchar(18),
+       examen           integer,
        preinscrito      varchar(11),
-       notaobtenida    int,
+       notaobtenida     numeric,
        borrado		boolean DEFAULT false
        
 );
@@ -332,8 +332,8 @@ CREATE TABLE examenasisten (
 CREATE TABLE examenapoyo (
 
        id    		SERIAL PRIMARY KEY,
-       examen           varchar(18),
-       personalapoyo   varchar(11),
+       examen           integer,
+       personalapoyo    varchar(11),
        borrado		boolean DEFAULT false
        
 );
@@ -345,7 +345,9 @@ CREATE TABLE clase (
        profesor    varchar(11),
        catedra     varchar(10),
        aula        varchar(38),
-       fecha	   varchar(13),
+       dia	   varchar(10),
+       bloque	   varchar(18),
+       valida	   varchar(20),
        borrado	   boolean DEFAULT false
 );
 

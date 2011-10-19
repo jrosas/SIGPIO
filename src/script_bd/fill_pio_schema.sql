@@ -84,4 +84,36 @@ INSERT INTO mensaje (fecha,emisor,contenido,procesado,asunto) VALUES
 ('20111019','V-19000123','Estamos llenando la base de datos con cosas divertidas',false,'A quien pueda interesar');
 
 INSERT INTO aspirante (cedula,plantel,nivelingreso,horastrabajo,beca,hermanosuniv,servicios,actividadextr,materiasfalla,dependenciaeco,habitosestudio,promedio,sexo) VALUES
-('V-19012345','J-12345682-1')
+('V-19012345','J-12345682-1','1000-2000',0,'Fundayacucho,700',0,'luz,telefono,agua,internet,tv-cable','','','total','',17.5,'M');
+
+INSERT INTO preinscrito (cedula,numeropreins,fechapreins) VALUES
+('V-19012345','K2000','20111010');
+
+INSERT INTO estudiante (cedula,numeroins,fechains) VALUES
+('V-19012345','K2000','20111014');
+
+INSERT INTO estudianterepresentante (representado,representante)VALUES
+('V-19012345','V-4741582');
+
+INSERT INTO preinscritocarrera (preinscrito,carrera) VALUES
+('V-19012345','0800');
+
+INSERT INTO examen (fecha,aula,tipo) VALUES
+('20110912','MEM - 016','Test Raven');
+
+INSERT INTO examenasisten (examen,preinscrito,notaobtenida) VALUES
+(1,'V-19012345',90.9);
+
+INSERT INTO examenapoyo (examen,personalapoyo) VALUES
+(1,'V-13245876'),
+(1,'V-13245866');
+
+INSERT INTO clase (profesor,catedra,aula,dia,bloque,valida) VALUES
+('V-19001234','LA123','MEM - 016','Lunes','7-8','20110120 - 20110320');
+
+INSERT INTO claseestudiante (clase,estudiante) VALUES
+(1,'V-19012345');
+
+INSERT INTO noticia (titulo,contenido) VALUES
+('Justin Bieber en la Simon','El hico mas lindo de todos en la simon!!! Wujuuuuu!');
+
