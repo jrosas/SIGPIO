@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Edificio" table="edificio" schema="public">
         <id name="nombre" type="string">

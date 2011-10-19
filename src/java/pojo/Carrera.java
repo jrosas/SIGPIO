@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,21 +15,22 @@ public class Carrera  implements java.io.Serializable {
      private String nombre;
      private String descripcion;
      private Boolean borrado;
-     private Set<PreinscritoCarrera> preinscritoCarreras = new HashSet<PreinscritoCarrera>(0);
+     private Set<Preinscritocarrera> preinscritocarreras = new HashSet<Preinscritocarrera>(0);
 
     public Carrera() {
     }
 
 	
-    public Carrera(String codigo) {
+    public Carrera(String codigo, String nombre) {
         this.codigo = codigo;
+        this.nombre = nombre;
     }
-    public Carrera(String codigo, String nombre, String descripcion, Boolean borrado, Set<PreinscritoCarrera> preinscritoCarreras) {
+    public Carrera(String codigo, String nombre, String descripcion, Boolean borrado, Set<Preinscritocarrera> preinscritocarreras) {
        this.codigo = codigo;
        this.nombre = nombre;
        this.descripcion = descripcion;
        this.borrado = borrado;
-       this.preinscritoCarreras = preinscritoCarreras;
+       this.preinscritocarreras = preinscritocarreras;
     }
    
     public String getCodigo() {
@@ -60,12 +61,12 @@ public class Carrera  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<PreinscritoCarrera> getPreinscritoCarreras() {
-        return this.preinscritoCarreras;
+    public Set<Preinscritocarrera> getPreinscritocarreras() {
+        return this.preinscritocarreras;
     }
     
-    public void setPreinscritoCarreras(Set<PreinscritoCarrera> preinscritoCarreras) {
-        this.preinscritoCarreras = preinscritoCarreras;
+    public void setPreinscritocarreras(Set<Preinscritocarrera> preinscritocarreras) {
+        this.preinscritocarreras = preinscritocarreras;
     }
 
 

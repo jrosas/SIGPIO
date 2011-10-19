@@ -1,21 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Evento" table="evento" schema="public">
-        <id name="nombre" type="string">
-            <column name="nombre" length="70" />
+        <id name="idevento" type="int">
+            <column name="idevento" />
             <generator class="assigned" />
         </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="70" />
+        </property>
         <property name="descripcion" type="string">
             <column name="descripcion" length="140" />
         </property>
-        <property name="fechaInicio" type="date">
-            <column name="fecha_inicio" length="13" />
+        <property name="fechainicio" type="string">
+            <column name="fechainicio" length="11" />
         </property>
-        <property name="fechaFin" type="date">
-            <column name="fecha_fin" length="13" />
+        <property name="fechafin" type="string">
+            <column name="fechafin" length="11" />
         </property>
         <property name="lugar" type="string">
             <column name="lugar" length="140" />
@@ -23,11 +26,11 @@
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="proveedoresEventos" inverse="true">
+        <set name="proveedoreseventos" inverse="true">
             <key>
-                <column name="evento" length="70" not-null="true" />
+                <column name="idevento" not-null="true" />
             </key>
-            <one-to-many class="pojo.ProveedoresEvento" />
+            <one-to-many class="pojo.Proveedoresevento" />
         </set>
     </class>
 </hibernate-mapping>

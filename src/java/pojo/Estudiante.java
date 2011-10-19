@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,57 +11,48 @@ import java.util.Set;
 public class Estudiante  implements java.io.Serializable {
 
 
-     private String cedula;
-     private Preinscrito preinscrito;
-     private String numeroIns;
-     private Date fechaIns;
+     private Preinscrito cedula;
+     private String numeroins;
+     private String fechains;
      private Boolean borrado;
-     private Set<ClaseEstudiante> claseEstudiantes = new HashSet<ClaseEstudiante>(0);
+     private Set<Claseestudiante> claseestudiantes = new HashSet<Claseestudiante>(0);
 
     public Estudiante() {
     }
 
 	
-    public Estudiante(String cedula, Preinscrito preinscrito) {
+    public Estudiante(Preinscrito cedula) {
         this.cedula = cedula;
-        this.preinscrito = preinscrito;
     }
-    public Estudiante(String cedula, Preinscrito preinscrito, String numeroIns, Date fechaIns, Boolean borrado, Set<ClaseEstudiante> claseEstudiantes) {
+    public Estudiante(Preinscrito cedula,  String numeroins, String fechains, Boolean borrado, Set<Claseestudiante> claseestudiantes) {
        this.cedula = cedula;
-       this.preinscrito = preinscrito;
-       this.numeroIns = numeroIns;
-       this.fechaIns = fechaIns;
+       this.numeroins = numeroins;
+       this.fechains = fechains;
        this.borrado = borrado;
-       this.claseEstudiantes = claseEstudiantes;
+       this.claseestudiantes = claseestudiantes;
     }
    
-    public String getCedula() {
+    public Preinscrito getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(String cedula) {
+    public void setCedula(Preinscrito cedula) {
         this.cedula = cedula;
     }
-    public Preinscrito getPreinscrito() {
-        return this.preinscrito;
+    
+    public String getNumeroins() {
+        return this.numeroins;
     }
     
-    public void setPreinscrito(Preinscrito preinscrito) {
-        this.preinscrito = preinscrito;
+    public void setNumeroins(String numeroins) {
+        this.numeroins = numeroins;
     }
-    public String getNumeroIns() {
-        return this.numeroIns;
-    }
-    
-    public void setNumeroIns(String numeroIns) {
-        this.numeroIns = numeroIns;
-    }
-    public Date getFechaIns() {
-        return this.fechaIns;
+    public String getFechains() {
+        return this.fechains;
     }
     
-    public void setFechaIns(Date fechaIns) {
-        this.fechaIns = fechaIns;
+    public void setFechains(String fechains) {
+        this.fechains = fechains;
     }
     public Boolean getBorrado() {
         return this.borrado;
@@ -71,12 +61,12 @@ public class Estudiante  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ClaseEstudiante> getClaseEstudiantes() {
-        return this.claseEstudiantes;
+    public Set<Claseestudiante> getClaseestudiantes() {
+        return this.claseestudiantes;
     }
     
-    public void setClaseEstudiantes(Set<ClaseEstudiante> claseEstudiantes) {
-        this.claseEstudiantes = claseEstudiantes;
+    public void setClaseestudiantes(Set<Claseestudiante> claseestudiantes) {
+        this.claseestudiantes = claseestudiantes;
     }
 
 

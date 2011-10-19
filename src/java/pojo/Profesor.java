@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,52 +11,44 @@ import java.util.Set;
 public class Profesor  implements java.io.Serializable {
 
 
-     private String cedula;
-     private Usuario usuario;
-     private Date fechaIngreso;
+     private Usuario cedula;
+     private String fechaingreso;
      private String cargo;
      private Boolean borrado;
-     private Set<ProfesorMateria> profesorMaterias = new HashSet<ProfesorMateria>(0);
+     private Set<Profesormateria> profesormaterias = new HashSet<Profesormateria>(0);
      private Set<Clase> clases = new HashSet<Clase>(0);
 
     public Profesor() {
     }
 
 	
-    public Profesor(String cedula, Usuario usuario) {
-        this.cedula = cedula;
-        this.usuario = usuario;
+    public Profesor(Usuario usuario) {
+        this.cedula = usuario;
+        
     }
-    public Profesor(String cedula, Usuario usuario, Date fechaIngreso, String cargo, Boolean borrado, Set<ProfesorMateria> profesorMaterias, Set<Clase> clases) {
-       this.cedula = cedula;
-       this.usuario = usuario;
-       this.fechaIngreso = fechaIngreso;
+    public Profesor(Usuario usuario, String fechaingreso, String cargo, Boolean borrado, Set<Profesormateria> profesormaterias, Set<Clase> clases) {
+       this.cedula = usuario;
+       this.fechaingreso = fechaingreso;
        this.cargo = cargo;
        this.borrado = borrado;
-       this.profesorMaterias = profesorMaterias;
+       this.profesormaterias = profesormaterias;
        this.clases = clases;
     }
    
-    public String getCedula() {
+    public Usuario getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(String cedula) {
+    public void setCedula(Usuario cedula) {
         this.cedula = cedula;
     }
-    public Usuario getUsuario() {
-        return this.usuario;
+    
+    public String getFechaingreso() {
+        return this.fechaingreso;
     }
     
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-    public Date getFechaIngreso() {
-        return this.fechaIngreso;
-    }
-    
-    public void setFechaIngreso(Date fechaIngreso) {
-        this.fechaIngreso = fechaIngreso;
+    public void setFechaingreso(String fechaingreso) {
+        this.fechaingreso = fechaingreso;
     }
     public String getCargo() {
         return this.cargo;
@@ -73,12 +64,12 @@ public class Profesor  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ProfesorMateria> getProfesorMaterias() {
-        return this.profesorMaterias;
+    public Set<Profesormateria> getProfesormaterias() {
+        return this.profesormaterias;
     }
     
-    public void setProfesorMaterias(Set<ProfesorMateria> profesorMaterias) {
-        this.profesorMaterias = profesorMaterias;
+    public void setProfesormaterias(Set<Profesormateria> profesormaterias) {
+        this.profesormaterias = profesormaterias;
     }
     public Set<Clase> getClases() {
         return this.clases;

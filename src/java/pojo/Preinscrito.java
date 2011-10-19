@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,61 +11,53 @@ import java.util.Set;
 public class Preinscrito  implements java.io.Serializable {
 
 
-     private String cedula;
-     private Aspirante aspirante;
-     private String numeroPreins;
-     private Date fechaPreins;
+     private Aspirante cedula;
+     private String numeropreins;
+     private String fechapreins;
      private Boolean borrado;
-     private Set<PreinscritoCarrera> preinscritoCarreras = new HashSet<PreinscritoCarrera>(0);
+     private Set<Preinscritocarrera> preinscritocarreras = new HashSet<Preinscritocarrera>(0);
      private Set<Estudiante> estudiantes = new HashSet<Estudiante>(0);
-     private Set<ExamenAsisten> examenAsistens = new HashSet<ExamenAsisten>(0);
+     private Set<Examenasisten> examenasistens = new HashSet<Examenasisten>(0);
 
     public Preinscrito() {
     }
 
 	
-    public Preinscrito(String cedula, Aspirante aspirante) {
+    public Preinscrito(Aspirante cedula) {
         this.cedula = cedula;
-        this.aspirante = aspirante;
+        
     }
-    public Preinscrito(String cedula, Aspirante aspirante, String numeroPreins, Date fechaPreins, Boolean borrado, Set<PreinscritoCarrera> preinscritoCarreras, Set<Estudiante> estudiantes, Set<ExamenAsisten> examenAsistens) {
+    public Preinscrito(Aspirante cedula, String numeropreins, String fechapreins, Boolean borrado, Set<Preinscritocarrera> preinscritocarreras, Set<Estudiante> estudiantes, Set<Examenasisten> examenasistens) {
        this.cedula = cedula;
-       this.aspirante = aspirante;
-       this.numeroPreins = numeroPreins;
-       this.fechaPreins = fechaPreins;
+       this.numeropreins = numeropreins;
+       this.fechapreins = fechapreins;
        this.borrado = borrado;
-       this.preinscritoCarreras = preinscritoCarreras;
+       this.preinscritocarreras = preinscritocarreras;
        this.estudiantes = estudiantes;
-       this.examenAsistens = examenAsistens;
+       this.examenasistens = examenasistens;
     }
    
-    public String getCedula() {
+    public Aspirante getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(String cedula) {
+    public void setCedula(Aspirante cedula) {
         this.cedula = cedula;
     }
-    public Aspirante getAspirante() {
-        return this.aspirante;
+    
+    public String getNumeropreins() {
+        return this.numeropreins;
     }
     
-    public void setAspirante(Aspirante aspirante) {
-        this.aspirante = aspirante;
+    public void setNumeropreins(String numeropreins) {
+        this.numeropreins = numeropreins;
     }
-    public String getNumeroPreins() {
-        return this.numeroPreins;
-    }
-    
-    public void setNumeroPreins(String numeroPreins) {
-        this.numeroPreins = numeroPreins;
-    }
-    public Date getFechaPreins() {
-        return this.fechaPreins;
+    public String getFechapreins() {
+        return this.fechapreins;
     }
     
-    public void setFechaPreins(Date fechaPreins) {
-        this.fechaPreins = fechaPreins;
+    public void setFechapreins(String fechapreins) {
+        this.fechapreins = fechapreins;
     }
     public Boolean getBorrado() {
         return this.borrado;
@@ -75,13 +66,14 @@ public class Preinscrito  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<PreinscritoCarrera> getPreinscritoCarreras() {
-        return this.preinscritoCarreras;
+    public Set<Preinscritocarrera> getPreinscritocarreras() {
+        return this.preinscritocarreras;
     }
     
-    public void setPreinscritoCarreras(Set<PreinscritoCarrera> preinscritoCarreras) {
-        this.preinscritoCarreras = preinscritoCarreras;
+    public void setPreinscritocarreras(Set<Preinscritocarrera> preinscritocarreras) {
+        this.preinscritocarreras = preinscritocarreras;
     }
+    
     public Set<Estudiante> getEstudiantes() {
         return this.estudiantes;
     }
@@ -89,16 +81,13 @@ public class Preinscrito  implements java.io.Serializable {
     public void setEstudiantes(Set<Estudiante> estudiantes) {
         this.estudiantes = estudiantes;
     }
-    public Set<ExamenAsisten> getExamenAsistens() {
-        return this.examenAsistens;
+    public Set<Examenasisten> getExamenasistens() {
+        return this.examenasistens;
     }
     
-    public void setExamenAsistens(Set<ExamenAsisten> examenAsistens) {
-        this.examenAsistens = examenAsistens;
+    public void setExamenasistens(Set<Examenasisten> examenasistens) {
+        this.examenasistens = examenasistens;
     }
-
-
-
 
 }
 

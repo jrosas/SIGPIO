@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,31 +11,40 @@ import java.util.Set;
 public class Evento  implements java.io.Serializable {
 
 
+     private int idevento;
      private String nombre;
      private String descripcion;
-     private Date fechaInicio;
-     private Date fechaFin;
+     private String fechainicio;
+     private String fechafin;
      private String lugar;
      private Boolean borrado;
-     private Set<ProveedoresEvento> proveedoresEventos = new HashSet<ProveedoresEvento>(0);
+     private Set<Proveedoresevento> proveedoreseventos = new HashSet<Proveedoresevento>(0);
 
     public Evento() {
     }
 
 	
-    public Evento(String nombre) {
-        this.nombre = nombre;
+    public Evento(int idevento) {
+        this.idevento = idevento;
     }
-    public Evento(String nombre, String descripcion, Date fechaInicio, Date fechaFin, String lugar, Boolean borrado, Set<ProveedoresEvento> proveedoresEventos) {
+    public Evento(int idevento, String nombre, String descripcion, String fechainicio, String fechafin, String lugar, Boolean borrado, Set<Proveedoresevento> proveedoreseventos) {
+       this.idevento = idevento;
        this.nombre = nombre;
        this.descripcion = descripcion;
-       this.fechaInicio = fechaInicio;
-       this.fechaFin = fechaFin;
+       this.fechainicio = fechainicio;
+       this.fechafin = fechafin;
        this.lugar = lugar;
        this.borrado = borrado;
-       this.proveedoresEventos = proveedoresEventos;
+       this.proveedoreseventos = proveedoreseventos;
     }
    
+    public int getIdevento() {
+        return this.idevento;
+    }
+    
+    public void setIdevento(int idevento) {
+        this.idevento = idevento;
+    }
     public String getNombre() {
         return this.nombre;
     }
@@ -51,19 +59,19 @@ public class Evento  implements java.io.Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Date getFechaInicio() {
-        return this.fechaInicio;
+    public String getFechainicio() {
+        return this.fechainicio;
     }
     
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFechainicio(String fechainicio) {
+        this.fechainicio = fechainicio;
     }
-    public Date getFechaFin() {
-        return this.fechaFin;
+    public String getFechafin() {
+        return this.fechafin;
     }
     
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
+    public void setFechafin(String fechafin) {
+        this.fechafin = fechafin;
     }
     public String getLugar() {
         return this.lugar;
@@ -79,12 +87,12 @@ public class Evento  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ProveedoresEvento> getProveedoresEventos() {
-        return this.proveedoresEventos;
+    public Set<Proveedoresevento> getProveedoreseventos() {
+        return this.proveedoreseventos;
     }
     
-    public void setProveedoresEventos(Set<ProveedoresEvento> proveedoresEventos) {
-        this.proveedoresEventos = proveedoresEventos;
+    public void setProveedoreseventos(Set<Proveedoresevento> proveedoreseventos) {
+        this.proveedoreseventos = proveedoreseventos;
     }
 
 

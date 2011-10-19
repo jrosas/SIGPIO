@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;
@@ -12,57 +12,53 @@ import java.util.Set;
 public class Aspirante  implements java.io.Serializable {
 
 
-     private String cedula;
+     private Usuario cedula;
      private Plantel plantel;
-     private Usuario usuario;
-     private String representante;
-     private String nivelIngreso;
-     private Integer horasTrabajo;
+     private String nivelingreso;
+     private Integer horastrabajo;
      private String beca;
-     private Integer hermanosUniv;
+     private Integer hermanosuniv;
      private String servicios;
-     private String actividadExtr;
-     private String materiasFalla;
-     private String dependenciaEco;
-     private String habitosEstudio;
+     private String actividadextr;
+     private String materiasfalla;
+     private String dependenciaeco;
+     private String habitosestudio;
      private BigDecimal promedio;
+     private String sexo;
      private Boolean borrado;
-     private Set<EstudianteRepresentante> estudianteRepresentantes = new HashSet<EstudianteRepresentante>(0);
-     private Set<Preinscrito> preinscritos = new HashSet<Preinscrito>(0);
+     private Set<Estudianterepresentante> estudianterepresentantes = new HashSet<Estudianterepresentante>(0);
 
     public Aspirante() {
     }
 
 	
-    public Aspirante(String cedula, Usuario usuario) {
-        this.cedula = cedula;
-        this.usuario = usuario;
+    public Aspirante(Usuario usuario) {
+        this.cedula = usuario;
+        
     }
-    public Aspirante(String cedula, Plantel plantel, Usuario usuario, String representante, String nivelIngreso, Integer horasTrabajo, String beca, Integer hermanosUniv, String servicios, String actividadExtr, String materiasFalla, String dependenciaEco, String habitosEstudio, BigDecimal promedio, Boolean borrado, Set<EstudianteRepresentante> estudianteRepresentantes, Set<Preinscrito> preinscritos) {
+    public Aspirante(Usuario cedula, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, BigDecimal promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes, Set<Preinscrito> preinscritos) {
        this.cedula = cedula;
        this.plantel = plantel;
-       this.usuario = usuario;
-       this.representante = representante;
-       this.nivelIngreso = nivelIngreso;
-       this.horasTrabajo = horasTrabajo;
+       this.nivelingreso = nivelingreso;
+       this.horastrabajo = horastrabajo;
        this.beca = beca;
-       this.hermanosUniv = hermanosUniv;
+       this.hermanosuniv = hermanosuniv;
        this.servicios = servicios;
-       this.actividadExtr = actividadExtr;
-       this.materiasFalla = materiasFalla;
-       this.dependenciaEco = dependenciaEco;
-       this.habitosEstudio = habitosEstudio;
+       this.actividadextr = actividadextr;
+       this.materiasfalla = materiasfalla;
+       this.dependenciaeco = dependenciaeco;
+       this.habitosestudio = habitosestudio;
        this.promedio = promedio;
+       this.sexo = sexo;
        this.borrado = borrado;
-       this.estudianteRepresentantes = estudianteRepresentantes;
-       this.preinscritos = preinscritos;
+       this.estudianterepresentantes = estudianterepresentantes;
     }
    
-    public String getCedula() {
+    public Usuario getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(String cedula) {
+    public void setCedula(Usuario cedula) {
         this.cedula = cedula;
     }
     public Plantel getPlantel() {
@@ -72,33 +68,20 @@ public class Aspirante  implements java.io.Serializable {
     public void setPlantel(Plantel plantel) {
         this.plantel = plantel;
     }
-    public Usuario getUsuario() {
-        return this.usuario;
+    
+    public String getNivelingreso() {
+        return this.nivelingreso;
     }
     
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setNivelingreso(String nivelingreso) {
+        this.nivelingreso = nivelingreso;
     }
-    public String getRepresentante() {
-        return this.representante;
-    }
-    
-    public void setRepresentante(String representante) {
-        this.representante = representante;
-    }
-    public String getNivelIngreso() {
-        return this.nivelIngreso;
+    public Integer getHorastrabajo() {
+        return this.horastrabajo;
     }
     
-    public void setNivelIngreso(String nivelIngreso) {
-        this.nivelIngreso = nivelIngreso;
-    }
-    public Integer getHorasTrabajo() {
-        return this.horasTrabajo;
-    }
-    
-    public void setHorasTrabajo(Integer horasTrabajo) {
-        this.horasTrabajo = horasTrabajo;
+    public void setHorastrabajo(Integer horastrabajo) {
+        this.horastrabajo = horastrabajo;
     }
     public String getBeca() {
         return this.beca;
@@ -107,12 +90,12 @@ public class Aspirante  implements java.io.Serializable {
     public void setBeca(String beca) {
         this.beca = beca;
     }
-    public Integer getHermanosUniv() {
-        return this.hermanosUniv;
+    public Integer getHermanosuniv() {
+        return this.hermanosuniv;
     }
     
-    public void setHermanosUniv(Integer hermanosUniv) {
-        this.hermanosUniv = hermanosUniv;
+    public void setHermanosuniv(Integer hermanosuniv) {
+        this.hermanosuniv = hermanosuniv;
     }
     public String getServicios() {
         return this.servicios;
@@ -121,33 +104,33 @@ public class Aspirante  implements java.io.Serializable {
     public void setServicios(String servicios) {
         this.servicios = servicios;
     }
-    public String getActividadExtr() {
-        return this.actividadExtr;
+    public String getActividadextr() {
+        return this.actividadextr;
     }
     
-    public void setActividadExtr(String actividadExtr) {
-        this.actividadExtr = actividadExtr;
+    public void setActividadextr(String actividadextr) {
+        this.actividadextr = actividadextr;
     }
-    public String getMateriasFalla() {
-        return this.materiasFalla;
-    }
-    
-    public void setMateriasFalla(String materiasFalla) {
-        this.materiasFalla = materiasFalla;
-    }
-    public String getDependenciaEco() {
-        return this.dependenciaEco;
+    public String getMateriasfalla() {
+        return this.materiasfalla;
     }
     
-    public void setDependenciaEco(String dependenciaEco) {
-        this.dependenciaEco = dependenciaEco;
+    public void setMateriasfalla(String materiasfalla) {
+        this.materiasfalla = materiasfalla;
     }
-    public String getHabitosEstudio() {
-        return this.habitosEstudio;
+    public String getDependenciaeco() {
+        return this.dependenciaeco;
     }
     
-    public void setHabitosEstudio(String habitosEstudio) {
-        this.habitosEstudio = habitosEstudio;
+    public void setDependenciaeco(String dependenciaeco) {
+        this.dependenciaeco = dependenciaeco;
+    }
+    public String getHabitosestudio() {
+        return this.habitosestudio;
+    }
+    
+    public void setHabitosestudio(String habitosestudio) {
+        this.habitosestudio = habitosestudio;
     }
     public BigDecimal getPromedio() {
         return this.promedio;
@@ -156,6 +139,13 @@ public class Aspirante  implements java.io.Serializable {
     public void setPromedio(BigDecimal promedio) {
         this.promedio = promedio;
     }
+    public String getSexo() {
+        return this.sexo;
+    }
+    
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
     public Boolean getBorrado() {
         return this.borrado;
     }
@@ -163,20 +153,14 @@ public class Aspirante  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<EstudianteRepresentante> getEstudianteRepresentantes() {
-        return this.estudianteRepresentantes;
+    public Set<Estudianterepresentante> getEstudianterepresentantes() {
+        return this.estudianterepresentantes;
     }
     
-    public void setEstudianteRepresentantes(Set<EstudianteRepresentante> estudianteRepresentantes) {
-        this.estudianteRepresentantes = estudianteRepresentantes;
-    }
-    public Set<Preinscrito> getPreinscritos() {
-        return this.preinscritos;
+    public void setEstudianterepresentantes(Set<Estudianterepresentante> estudianterepresentantes) {
+        this.estudianterepresentantes = estudianterepresentantes;
     }
     
-    public void setPreinscritos(Set<Preinscrito> preinscritos) {
-        this.preinscritos = preinscritos;
-    }
 
 
 

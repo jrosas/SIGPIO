@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -18,30 +18,47 @@ public class Plantel  implements java.io.Serializable {
      private String telefonos;
      private String direccion;
      private String correo;
-     private String coordinadorPio;
-     private String director;
+     private String coordnombres;
+     private String coordapellidos;
+     private String coordtelfs;
+     private String coordemail;
+     private String coordcedula;
+     private String direcnombres;
+     private String direcapellidos;
+     private String directelfs;
+     private String direcemail;
+     private String direccedula;
      private String menciones;
-     private String materiasFalla;
-     private String programasRemit;
-     private String danosPlanta;
+     private String materiasfalla;
+     private String programasremit;
+     private String danosplanta;
      private Integer matricula;
-     private Integer casosEmbarazo;
-     private Boolean asistioCharla;
-     private Boolean orientacionFam;
-     private Boolean orientacionInd;
+     private Boolean asistiocharla;
+     private Boolean orientacionfam;
+     private Boolean orientacionind;
      private Boolean borrado;
-     private Set<ViolenciaPlantel> violenciaPlantels = new HashSet<ViolenciaPlantel>(0);
+     private Set<Violenciaplantel> violenciaplantels = new HashSet<Violenciaplantel>(0);
+     private Set<Embarazoplantel> embarazoplantels = new HashSet<Embarazoplantel>(0);
      private Set<Aspirante> aspirantes = new HashSet<Aspirante>(0);
-     private Set<CharlaPlantel> charlaPlantels = new HashSet<CharlaPlantel>(0);
+     private Set<Charlaplantel> charlaplantels = new HashSet<Charlaplantel>(0);
 
     public Plantel() {
     }
 
 	
-    public Plantel(String rif) {
+    public Plantel(String rif, String nombre, String distrito, String tipo, String coordnombres, String coordapellidos, String coordtelfs, String coordemail, String coordcedula, String menciones) {
         this.rif = rif;
+        this.nombre = nombre;
+        this.distrito = distrito;
+        this.tipo = tipo;
+        this.coordnombres = coordnombres;
+        this.coordapellidos = coordapellidos;
+        this.coordtelfs = coordtelfs;
+        this.coordemail = coordemail;
+        this.coordcedula = coordcedula;
+        this.menciones = menciones;
     }
-    public Plantel(String rif, String nombre, String distrito, String tipo, String telefonos, String direccion, String correo, String coordinadorPio, String director, String menciones, String materiasFalla, String programasRemit, String danosPlanta, Integer matricula, Integer casosEmbarazo, Boolean asistioCharla, Boolean orientacionFam, Boolean orientacionInd, Boolean borrado, Set<ViolenciaPlantel> violenciaPlantels, Set<Aspirante> aspirantes, Set<CharlaPlantel> charlaPlantels) {
+    public Plantel(String rif, String nombre, String distrito, String tipo, String telefonos, String direccion, String correo, String coordnombres, String coordapellidos, String coordtelfs, String coordemail, String coordcedula, String direcnombres, String direcapellidos, String directelfs, String direcemail, String direccedula, String menciones, String materiasfalla, String programasremit, String danosplanta, Integer matricula, Boolean asistiocharla, Boolean orientacionfam, Boolean orientacionind, Boolean borrado, Set<Violenciaplantel> violenciaplantels,Set<Embarazoplantel> embarazoplantels, Set<Aspirante> aspirantes, Set<Charlaplantel> charlaplantels) {
        this.rif = rif;
        this.nombre = nombre;
        this.distrito = distrito;
@@ -49,21 +66,29 @@ public class Plantel  implements java.io.Serializable {
        this.telefonos = telefonos;
        this.direccion = direccion;
        this.correo = correo;
-       this.coordinadorPio = coordinadorPio;
-       this.director = director;
+       this.coordnombres = coordnombres;
+       this.coordapellidos = coordapellidos;
+       this.coordtelfs = coordtelfs;
+       this.coordemail = coordemail;
+       this.coordcedula = coordcedula;
+       this.direcnombres = direcnombres;
+       this.direcapellidos = direcapellidos;
+       this.directelfs = directelfs;
+       this.direcemail = direcemail;
+       this.direccedula = direccedula;
        this.menciones = menciones;
-       this.materiasFalla = materiasFalla;
-       this.programasRemit = programasRemit;
-       this.danosPlanta = danosPlanta;
+       this.materiasfalla = materiasfalla;
+       this.programasremit = programasremit;
+       this.danosplanta = danosplanta;
        this.matricula = matricula;
-       this.casosEmbarazo = casosEmbarazo;
-       this.asistioCharla = asistioCharla;
-       this.orientacionFam = orientacionFam;
-       this.orientacionInd = orientacionInd;
+       this.asistiocharla = asistiocharla;
+       this.orientacionfam = orientacionfam;
+       this.orientacionind = orientacionind;
        this.borrado = borrado;
-       this.violenciaPlantels = violenciaPlantels;
+       this.violenciaplantels = violenciaplantels;
+       this.embarazoplantels = embarazoplantels;
        this.aspirantes = aspirantes;
-       this.charlaPlantels = charlaPlantels;
+       this.charlaplantels = charlaplantels;
     }
    
     public String getRif() {
@@ -115,19 +140,75 @@ public class Plantel  implements java.io.Serializable {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    public String getCoordinadorPio() {
-        return this.coordinadorPio;
+    public String getCoordnombres() {
+        return this.coordnombres;
     }
     
-    public void setCoordinadorPio(String coordinadorPio) {
-        this.coordinadorPio = coordinadorPio;
+    public void setCoordnombres(String coordnombres) {
+        this.coordnombres = coordnombres;
     }
-    public String getDirector() {
-        return this.director;
+    public String getCoordapellidos() {
+        return this.coordapellidos;
     }
     
-    public void setDirector(String director) {
-        this.director = director;
+    public void setCoordapellidos(String coordapellidos) {
+        this.coordapellidos = coordapellidos;
+    }
+    public String getCoordtelfs() {
+        return this.coordtelfs;
+    }
+    
+    public void setCoordtelfs(String coordtelfs) {
+        this.coordtelfs = coordtelfs;
+    }
+    public String getCoordemail() {
+        return this.coordemail;
+    }
+    
+    public void setCoordemail(String coordemail) {
+        this.coordemail = coordemail;
+    }
+    public String getCoordcedula() {
+        return this.coordcedula;
+    }
+    
+    public void setCoordcedula(String coordcedula) {
+        this.coordcedula = coordcedula;
+    }
+    public String getDirecnombres() {
+        return this.direcnombres;
+    }
+    
+    public void setDirecnombres(String direcnombres) {
+        this.direcnombres = direcnombres;
+    }
+    public String getDirecapellidos() {
+        return this.direcapellidos;
+    }
+    
+    public void setDirecapellidos(String direcapellidos) {
+        this.direcapellidos = direcapellidos;
+    }
+    public String getDirectelfs() {
+        return this.directelfs;
+    }
+    
+    public void setDirectelfs(String directelfs) {
+        this.directelfs = directelfs;
+    }
+    public String getDirecemail() {
+        return this.direcemail;
+    }
+    
+    public void setDirecemail(String direcemail) {
+        this.direcemail = direcemail;
+    }
+    public String getDireccedula() {
+        return this.direccedula;
+    }
+    
+    public void setDireccedula(String direccedula) {
+        this.direccedula = direccedula;
     }
     public String getMenciones() {
         return this.menciones;
@@ -136,26 +217,26 @@ public class Plantel  implements java.io.Serializable {
     public void setMenciones(String menciones) {
         this.menciones = menciones;
     }
-    public String getMateriasFalla() {
-        return this.materiasFalla;
+    public String getMateriasfalla() {
+        return this.materiasfalla;
     }
     
-    public void setMateriasFalla(String materiasFalla) {
-        this.materiasFalla = materiasFalla;
+    public void setMateriasfalla(String materiasfalla) {
+        this.materiasfalla = materiasfalla;
     }
-    public String getProgramasRemit() {
-        return this.programasRemit;
-    }
-    
-    public void setProgramasRemit(String programasRemit) {
-        this.programasRemit = programasRemit;
-    }
-    public String getDanosPlanta() {
-        return this.danosPlanta;
+    public String getProgramasremit() {
+        return this.programasremit;
     }
     
-    public void setDanosPlanta(String danosPlanta) {
-        this.danosPlanta = danosPlanta;
+    public void setProgramasremit(String programasremit) {
+        this.programasremit = programasremit;
+    }
+    public String getDanosplanta() {
+        return this.danosplanta;
+    }
+    
+    public void setDanosplanta(String danosplanta) {
+        this.danosplanta = danosplanta;
     }
     public Integer getMatricula() {
         return this.matricula;
@@ -164,33 +245,27 @@ public class Plantel  implements java.io.Serializable {
     public void setMatricula(Integer matricula) {
         this.matricula = matricula;
     }
-    public Integer getCasosEmbarazo() {
-        return this.casosEmbarazo;
+    
+    public Boolean getAsistiocharla() {
+        return this.asistiocharla;
     }
     
-    public void setCasosEmbarazo(Integer casosEmbarazo) {
-        this.casosEmbarazo = casosEmbarazo;
+    public void setAsistiocharla(Boolean asistiocharla) {
+        this.asistiocharla = asistiocharla;
     }
-    public Boolean getAsistioCharla() {
-        return this.asistioCharla;
-    }
-    
-    public void setAsistioCharla(Boolean asistioCharla) {
-        this.asistioCharla = asistioCharla;
-    }
-    public Boolean getOrientacionFam() {
-        return this.orientacionFam;
+    public Boolean getOrientacionfam() {
+        return this.orientacionfam;
     }
     
-    public void setOrientacionFam(Boolean orientacionFam) {
-        this.orientacionFam = orientacionFam;
+    public void setOrientacionfam(Boolean orientacionfam) {
+        this.orientacionfam = orientacionfam;
     }
-    public Boolean getOrientacionInd() {
-        return this.orientacionInd;
+    public Boolean getOrientacionind() {
+        return this.orientacionind;
     }
     
-    public void setOrientacionInd(Boolean orientacionInd) {
-        this.orientacionInd = orientacionInd;
+    public void setOrientacionind(Boolean orientacionind) {
+        this.orientacionind = orientacionind;
     }
     public Boolean getBorrado() {
         return this.borrado;
@@ -199,13 +274,23 @@ public class Plantel  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ViolenciaPlantel> getViolenciaPlantels() {
-        return this.violenciaPlantels;
+    public Set<Violenciaplantel> getViolenciaplantels() {
+        return this.violenciaplantels;
     }
     
-    public void setViolenciaPlantels(Set<ViolenciaPlantel> violenciaPlantels) {
-        this.violenciaPlantels = violenciaPlantels;
+    public void setViolenciaplantels(Set<Violenciaplantel> violenciaplantels) {
+        this.violenciaplantels = violenciaplantels;
     }
+
+    public Set<Embarazoplantel> getEmbarazoplantels() {
+        return embarazoplantels;
+    }
+
+    public void setEmbarazoplantels(Set<Embarazoplantel> embarazoplantels) {
+        this.embarazoplantels = embarazoplantels;
+    }
+    
+    
     public Set<Aspirante> getAspirantes() {
         return this.aspirantes;
     }
@@ -213,12 +298,12 @@ public class Plantel  implements java.io.Serializable {
     public void setAspirantes(Set<Aspirante> aspirantes) {
         this.aspirantes = aspirantes;
     }
-    public Set<CharlaPlantel> getCharlaPlantels() {
-        return this.charlaPlantels;
+    public Set<Charlaplantel> getCharlaplantels() {
+        return this.charlaplantels;
     }
     
-    public void setCharlaPlantels(Set<CharlaPlantel> charlaPlantels) {
-        this.charlaPlantels = charlaPlantels;
+    public void setCharlaplantels(Set<Charlaplantel> charlaplantels) {
+        this.charlaplantels = charlaplantels;
     }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Aspirante" table="aspirante" schema="public">
         <id name="cedula" type="string">
@@ -14,47 +14,47 @@
         <many-to-one name="usuario" class="pojo.Usuario" update="false" insert="false" fetch="select">
             <column name="cedula" length="11" not-null="true" unique="true" />
         </many-to-one>
-        <property name="representante" type="string">
-            <column name="representante" length="11" />
+        <property name="nivelingreso" type="string">
+            <column name="nivelingreso" length="20" />
         </property>
-        <property name="nivelIngreso" type="string">
-            <column name="nivel_ingreso" length="20" />
-        </property>
-        <property name="horasTrabajo" type="java.lang.Integer">
-            <column name="horas_trabajo" />
+        <property name="horastrabajo" type="java.lang.Integer">
+            <column name="horastrabajo" />
         </property>
         <property name="beca" type="string">
             <column name="beca" length="30" />
         </property>
-        <property name="hermanosUniv" type="java.lang.Integer">
-            <column name="hermanos_univ" />
+        <property name="hermanosuniv" type="java.lang.Integer">
+            <column name="hermanosuniv" />
         </property>
         <property name="servicios" type="string">
             <column name="servicios" length="100" />
         </property>
-        <property name="actividadExtr" type="string">
-            <column name="actividad_extr" length="100" />
+        <property name="actividadextr" type="string">
+            <column name="actividadextr" length="100" />
         </property>
-        <property name="materiasFalla" type="string">
-            <column name="materias_falla" length="100" />
+        <property name="materiasfalla" type="string">
+            <column name="materiasfalla" length="100" />
         </property>
-        <property name="dependenciaEco" type="string">
-            <column name="dependencia_eco" length="10" />
+        <property name="dependenciaeco" type="string">
+            <column name="dependenciaeco" length="10" />
         </property>
-        <property name="habitosEstudio" type="string">
-            <column name="habitos_estudio" length="100" />
+        <property name="habitosestudio" type="string">
+            <column name="habitosestudio" length="100" />
         </property>
         <property name="promedio" type="big_decimal">
             <column name="promedio" precision="131089" scale="0" />
         </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="1" />
+        </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="estudianteRepresentantes" inverse="true">
+        <set name="estudianterepresentantes" inverse="true">
             <key>
-                <column name="representado" length="11" not-null="true" />
+                <column name="representado" length="11" />
             </key>
-            <one-to-many class="pojo.EstudianteRepresentante" />
+            <one-to-many class="pojo.Estudianterepresentante" />
         </set>
         <set name="preinscritos" inverse="true">
             <key>

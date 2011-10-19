@@ -1,25 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Mensaje" table="mensaje" schema="public">
-        <composite-id name="id" class="pojo.MensajeId">
-            <key-property name="fecha" type="timestamp">
-                <column name="fecha" length="29" />
-            </key-property>
-            <key-property name="emisor" type="string">
-                <column name="emisor" length="11" />
-            </key-property>
-        </composite-id>
-        <many-to-one name="personalPio" class="pojo.PersonalPio" fetch="select">
-            <column name="receptor" length="11" />
+        <id name="idmensaje" type="int">
+            <column name="idmensaje" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usuario" class="pojo.Usuario" fetch="select">
+            <column name="emisor" length="11" />
         </many-to-one>
-        <many-to-one name="usuario" class="pojo.Usuario" update="false" insert="false" fetch="select">
-            <column name="emisor" length="11" not-null="true" />
-        </many-to-one>
-        <property name="leido" type="java.lang.Boolean">
-            <column name="leido" />
+        <property name="fecha" type="string">
+            <column name="fecha" length="11" />
+        </property>
+        <property name="contenido" type="string">
+            <column name="contenido" length="200" />
+        </property>
+        <property name="procesado" type="java.lang.Boolean">
+            <column name="procesado" />
         </property>
         <property name="asunto" type="string">
             <column name="asunto" length="20" />

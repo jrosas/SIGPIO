@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,23 +15,22 @@ public class Catedra  implements java.io.Serializable {
      private String nombre;
      private String descripcion;
      private Boolean borrado;
-     private Set<Clase> clases = new HashSet<Clase>(0);
-     private Set<ProfesorMateria> profesorMaterias = new HashSet<ProfesorMateria>(0);
+     
 
     public Catedra() {
     }
 
 	
-    public Catedra(String codigo) {
+    public Catedra(String codigo, String nombre) {
         this.codigo = codigo;
+        this.nombre = nombre;
     }
-    public Catedra(String codigo, String nombre, String descripcion, Boolean borrado, Set<Clase> clases, Set<ProfesorMateria> profesorMaterias) {
+    public Catedra(String codigo, String nombre, String descripcion, Boolean borrado) {
        this.codigo = codigo;
        this.nombre = nombre;
        this.descripcion = descripcion;
        this.borrado = borrado;
-       this.clases = clases;
-       this.profesorMaterias = profesorMaterias;
+       
     }
    
     public String getCodigo() {
@@ -62,20 +61,7 @@ public class Catedra  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<Clase> getClases() {
-        return this.clases;
-    }
     
-    public void setClases(Set<Clase> clases) {
-        this.clases = clases;
-    }
-    public Set<ProfesorMateria> getProfesorMaterias() {
-        return this.profesorMaterias;
-    }
-    
-    public void setProfesorMaterias(Set<ProfesorMateria> profesorMaterias) {
-        this.profesorMaterias = profesorMaterias;
-    }
 
 
 

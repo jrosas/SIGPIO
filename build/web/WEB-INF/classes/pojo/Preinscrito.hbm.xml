@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Preinscrito" table="preinscrito" schema="public">
         <id name="cedula" type="string">
@@ -11,20 +11,20 @@
         <many-to-one name="aspirante" class="pojo.Aspirante" update="false" insert="false" fetch="select">
             <column name="cedula" length="11" not-null="true" unique="true" />
         </many-to-one>
-        <property name="numeroPreins" type="string">
-            <column name="numero_preins" length="30" />
+        <property name="numeropreins" type="string">
+            <column name="numeropreins" length="30" />
         </property>
-        <property name="fechaPreins" type="date">
-            <column name="fecha_preins" length="13" />
+        <property name="fechapreins" type="string">
+            <column name="fechapreins" length="11" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <set name="preinscritoCarreras" inverse="true">
+        <set name="preinscritocarreras" inverse="true">
             <key>
-                <column name="preinscrito" length="11" not-null="true" />
+                <column name="preinscrito" length="11" />
             </key>
-            <one-to-many class="pojo.PreinscritoCarrera" />
+            <one-to-many class="pojo.Preinscritocarrera" />
         </set>
         <set name="estudiantes" inverse="true">
             <key>
@@ -32,11 +32,11 @@
             </key>
             <one-to-many class="pojo.Estudiante" />
         </set>
-        <set name="examenAsistens" inverse="true">
+        <set name="examenasistens" inverse="true">
             <key>
-                <column name="preinscrito" length="11" not-null="true" />
+                <column name="preinscrito" length="11" />
             </key>
-            <one-to-many class="pojo.ExamenAsisten" />
+            <one-to-many class="pojo.Examenasisten" />
         </set>
     </class>
 </hibernate-mapping>

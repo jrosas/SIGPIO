@@ -1,8 +1,7 @@
 package pojo;
-// Generated Oct 16, 2011 2:22:38 PM by Hibernate Tools 3.2.1.GA
+// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,11 +13,11 @@ public class Examen  implements java.io.Serializable {
 
      private String codigo;
      private Aula aula;
-     private Date fecha;
+     private String fecha;
      private String tipo;
      private Boolean borrado;
-     private Set<ExamenAsisten> examenAsistens = new HashSet<ExamenAsisten>(0);
-     private Set<ExamenApoyo> examenApoyos = new HashSet<ExamenApoyo>(0);
+     private Set<Examenasisten> examenasistens = new HashSet<Examenasisten>(0);
+     private Set<Examenapoyo> examenapoyos = new HashSet<Examenapoyo>(0);
 
     public Examen() {
     }
@@ -27,14 +26,14 @@ public class Examen  implements java.io.Serializable {
     public Examen(String codigo) {
         this.codigo = codigo;
     }
-    public Examen(String codigo, Aula aula, Date fecha, String tipo, Boolean borrado, Set<ExamenAsisten> examenAsistens, Set<ExamenApoyo> examenApoyos) {
+    public Examen(String codigo, Aula aula, String fecha, String tipo, Boolean borrado, Set<Examenasisten> examenasistens, Set<Examenapoyo> examenapoyos) {
        this.codigo = codigo;
        this.aula = aula;
        this.fecha = fecha;
        this.tipo = tipo;
        this.borrado = borrado;
-       this.examenAsistens = examenAsistens;
-       this.examenApoyos = examenApoyos;
+       this.examenasistens = examenasistens;
+       this.examenapoyos = examenapoyos;
     }
    
     public String getCodigo() {
@@ -51,11 +50,11 @@ public class Examen  implements java.io.Serializable {
     public void setAula(Aula aula) {
         this.aula = aula;
     }
-    public Date getFecha() {
+    public String getFecha() {
         return this.fecha;
     }
     
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     public String getTipo() {
@@ -72,19 +71,19 @@ public class Examen  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<ExamenAsisten> getExamenAsistens() {
-        return this.examenAsistens;
+    public Set<Examenasisten> getExamenasistens() {
+        return this.examenasistens;
     }
     
-    public void setExamenAsistens(Set<ExamenAsisten> examenAsistens) {
-        this.examenAsistens = examenAsistens;
+    public void setExamenasistens(Set<Examenasisten> examenasistens) {
+        this.examenasistens = examenasistens;
     }
-    public Set<ExamenApoyo> getExamenApoyos() {
-        return this.examenApoyos;
+    public Set<Examenapoyo> getExamenapoyos() {
+        return this.examenapoyos;
     }
     
-    public void setExamenApoyos(Set<ExamenApoyo> examenApoyos) {
-        this.examenApoyos = examenApoyos;
+    public void setExamenapoyos(Set<Examenapoyo> examenapoyos) {
+        this.examenapoyos = examenapoyos;
     }
 
 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Preinscritocarrera" table="preinscritocarrera" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="preinscrito" class="pojo.Preinscrito" fetch="select">
+            <column name="preinscrito" length="11" />
+        </many-to-one>
+        <many-to-one name="carrera" class="pojo.Carrera" fetch="select">
+            <column name="carrera" length="10" />
+        </many-to-one>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+    </class>
+</hibernate-mapping>
