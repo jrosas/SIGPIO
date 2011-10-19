@@ -1,3 +1,6 @@
+\c piodb;
+
+
 INSERT INTO edificio (nombre,direccion) VALUES
 ('MEM', 'Boulevard al frente de meu y al lado de bonsai'),
 ('MEU', 'Al lado de ENE y frente al estacionamiento de profesores'),
