@@ -12,10 +12,10 @@
             <column name="preinscrito" length="11" />
         </many-to-one>
         <many-to-one name="examen" class="pojo.Examen" fetch="select">
-            <column name="examen" length="18" />
+            <column name="examen"  />
         </many-to-one>
-        <property name="notaobtenida" type="java.lang.Float">
-            <column name="notaobtenida" precision="8" scale="8" />
+        <property name="notaobtenida" type="big_decimal">
+            <column name="notaobtenida" precision="131089" scale="0" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
