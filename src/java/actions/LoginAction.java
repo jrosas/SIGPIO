@@ -5,12 +5,14 @@
 package actions;
 
 import forms.LoginActionForm;
+import helpers.UsuarioHelper;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import pojo.Usuario;
 
 /**
  *
@@ -44,9 +46,20 @@ public class LoginAction extends org.apache.struts.action.Action {
             HttpSession session = request.getSession();
             LoginActionForm beanForm = (LoginActionForm) form;
             String usrname= beanForm.getEmail();
+            String clave=beanForm.getClave();
+            UsuarioHelper helper = new UsuarioHelper();
+            Usuario usuarios = helper.getUsuarioByemail(usrname);
             
             
-                return mapping.findForward(FAILURE);
+            if(((usuarios.getEmail()).equals(usrname)) && ((usuarios.getClave()).equals(clave))){
+                 return mapping.findForward(SUCCESS);
+            
+            }else {
+                 return mapping.findForward(FAILURE);
+            }
+                
+            
+            
         }     
-         
+      
 }

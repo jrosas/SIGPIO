@@ -10,7 +10,10 @@
 -->
 
 <tiles-definitions>
-
+    <definition name="pio-template" path="/template/common-layout.jsp">
+        <put name="header" value="/template/header.jsp" />
+        <put name="footer" value="/template/footer.jsp" />
+    </definition>
     <!-- sample tiles definitions
     <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
         <put name="title"  value="Sample Page Title" />

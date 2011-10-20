@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Estudiante" table="estudiante" schema="public">
         <id name="cedula" type="string">
             <column name="cedula" length="11" />
-            <generator class="assigned" />
+            <generator class="foreign">
+                <param name="property">cedula</param>
+            </generator>
         </id>
-        <many-to-one name="preinscrito" class="pojo.Preinscrito" update="false" insert="false" fetch="select">
-            <column name="cedula" length="11" not-null="true" unique="true" />
-        </many-to-one>
         <property name="numeroins" type="string">
             <column name="numeroins" length="30" />
         </property>
@@ -26,5 +25,6 @@
             </key>
             <one-to-many class="pojo.Claseestudiante" />
         </set>
+        <one-to-one name="cedula" class="pojo.Aspirante" constrained="true"/>
     </class>
 </hibernate-mapping>

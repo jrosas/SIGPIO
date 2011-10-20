@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojo.Noticia" table="noticia" schema="public">
         <id name="idnoticia" type="int">
             <column name="idnoticia" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="titulo" type="string">
             <column name="titulo" length="26" />

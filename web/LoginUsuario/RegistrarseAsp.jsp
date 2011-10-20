@@ -8,6 +8,7 @@
 <body>
 <h1>Registrar Estudiante</h1>
 <html:errors/>
+<html:javascript formName="RegistrarseActionForm"/>
 
 <table>
     <html:form action="RegistrarseAsp">
