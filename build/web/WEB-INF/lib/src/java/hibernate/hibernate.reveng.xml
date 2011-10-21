@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="piodb" match-schema="public"/>
+  <table-filter match-name="examenasisten"/>
+  <table-filter match-name="charlaplantel"/>
+  <table-filter match-name="edificio"/>
+  <table-filter match-name="personalpio"/>
+  <table-filter match-name="representante"/>
+  <table-filter match-name="preinscritocarrera"/>
+  <table-filter match-name="profesor"/>
+  <table-filter match-name="examen"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="estudianterepresentante"/>
+  <table-filter match-name="estudiantesc"/>
+  <table-filter match-name="profesormateria"/>
+  <table-filter match-name="claseestudiante"/>
+  <table-filter match-name="personalapoyo"/>
+  <table-filter match-name="proveedor"/>
+  <table-filter match-name="violenciaplantel"/>
+  <table-filter match-name="carrera"/>
+  <table-filter match-name="aspirante"/>
+  <table-filter match-name="mensaje"/>
+  <table-filter match-name="clase"/>
+  <table-filter match-name="noticia"/>
+  <table-filter match-name="evento"/>
+  <table-filter match-name="proveedoresevento"/>
+  <table-filter match-name="estudiante"/>
+  <table-filter match-name="catedra"/>
+  <table-filter match-name="examenapoyo"/>
+  <table-filter match-name="plantel"/>
+  <table-filter match-name="preinscrito"/>
+  <table-filter match-name="embarazoplantel"/>
+  <table-filter match-name="aula"/>
+</hibernate-reverse-engineering>
