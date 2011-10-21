@@ -260,7 +260,7 @@ CREATE TABLE aspirante (
        materiasfalla  varchar(100),
        dependenciaeco varchar(10),
        habitosestudio varchar(100),
-       promedio        numeric,
+       promedio        double precision,
        sexo	       varchar(1),
        borrado	       boolean DEFAULT false
 );
@@ -323,7 +323,7 @@ CREATE TABLE examenasisten (
        id    		SERIAL PRIMARY KEY,
        examen           integer,
        preinscrito      varchar(11),
-       notaobtenida     numeric,
+       notaobtenida     double precision,
        borrado		boolean DEFAULT false
        
 );

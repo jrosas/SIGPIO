@@ -11,7 +11,8 @@ import java.util.Set;
 public class Profesor  implements java.io.Serializable {
 
 
-     private Usuario cedula;
+     private String cedula;
+     private Usuario usuario;
      private String fechaingreso;
      private String cargo;
      private Boolean borrado;
@@ -22,12 +23,13 @@ public class Profesor  implements java.io.Serializable {
     }
 
 	
-    public Profesor(Usuario usuario) {
+    public Profesor(String usuario) {
         this.cedula = usuario;
         
     }
-    public Profesor(Usuario usuario, String fechaingreso, String cargo, Boolean borrado, Set<Profesormateria> profesormaterias, Set<Clase> clases) {
-       this.cedula = usuario;
+    public Profesor(String cedula,Usuario usuario, String fechaingreso, String cargo, Boolean borrado, Set<Profesormateria> profesormaterias, Set<Clase> clases) {
+       this.cedula = cedula;
+       this.usuario=usuario;
        this.fechaingreso = fechaingreso;
        this.cargo = cargo;
        this.borrado = borrado;
@@ -35,13 +37,23 @@ public class Profesor  implements java.io.Serializable {
        this.clases = clases;
     }
    
-    public Usuario getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(Usuario cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+    
     
     public String getFechaingreso() {
         return this.fechaingreso;

@@ -10,7 +10,8 @@ public class Personalpio  implements java.io.Serializable {
 
 
      
-     private Usuario cedula;
+     private String cedula;
+     private Usuario usuario;
      private String cargo;
      private Boolean borrado;
 
@@ -18,23 +19,33 @@ public class Personalpio  implements java.io.Serializable {
     }
 
 	
-    public Personalpio(Usuario usuario) {
+    public Personalpio(String usuario) {
         this.cedula = usuario;
         
     }
-    public Personalpio(Usuario usuario, String cargo, Boolean borrado) {
-       this.cedula = usuario;
+    public Personalpio(String cedula, Usuario usuario, String cargo, Boolean borrado) {
+       this.cedula = cedula;
+       this.usuario=usuario;
        this.cargo = cargo;
        this.borrado = borrado;
     }
    
-    public Usuario getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(Usuario cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
     
     public String getCargo() {
         return this.cargo;

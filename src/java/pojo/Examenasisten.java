@@ -1,7 +1,7 @@
 package pojo;
 // Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
 
-import java.math.BigDecimal;
+//import java.math.Float;
 
 
 
@@ -15,7 +15,7 @@ public class Examenasisten  implements java.io.Serializable {
      private int id;
      private Preinscrito preinscrito;
      private Examen examen;
-     private BigDecimal notaobtenida;
+     private Float notaobtenida;
      private Boolean borrado;
 
     public Examenasisten() {
@@ -25,7 +25,7 @@ public class Examenasisten  implements java.io.Serializable {
     public Examenasisten(int id) {
         this.id = id;
     }
-    public Examenasisten(int id, Preinscrito preinscrito, Examen examen, BigDecimal notaobtenida, Boolean borrado) {
+    public Examenasisten(int id, Preinscrito preinscrito, Examen examen, Float notaobtenida, Boolean borrado) {
        this.id = id;
        this.preinscrito = preinscrito;
        this.examen = examen;
@@ -54,11 +54,11 @@ public class Examenasisten  implements java.io.Serializable {
     public void setExamen(Examen examen) {
         this.examen = examen;
     }
-    public BigDecimal getNotaobtenida() {
+    public Float getNotaobtenida() {
         return this.notaobtenida;
     }
     
-    public void setNotaobtenida(BigDecimal notaobtenida) {
+    public void setNotaobtenida(Float notaobtenida) {
         this.notaobtenida = notaobtenida;
     }
     public Boolean getBorrado() {

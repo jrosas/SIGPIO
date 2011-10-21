@@ -11,7 +11,8 @@ import java.util.Set;
 public class Preinscrito  implements java.io.Serializable {
 
 
-     private Aspirante cedula;
+     private String cedula;
+     private Aspirante aspirante;
      private String numeropreins;
      private String fechapreins;
      private Boolean borrado;
@@ -23,12 +24,13 @@ public class Preinscrito  implements java.io.Serializable {
     }
 
 	
-    public Preinscrito(Aspirante cedula) {
+    public Preinscrito(String cedula) {
         this.cedula = cedula;
         
     }
-    public Preinscrito(Aspirante cedula, String numeropreins, String fechapreins, Boolean borrado, Set<Preinscritocarrera> preinscritocarreras, Set<Estudiante> estudiantes, Set<Examenasisten> examenasistens) {
+    public Preinscrito(String cedula, Aspirante aspirante, String numeropreins, String fechapreins, Boolean borrado, Set<Preinscritocarrera> preinscritocarreras, Set<Estudiante> estudiantes, Set<Examenasisten> examenasistens) {
        this.cedula = cedula;
+       this.aspirante=aspirante;
        this.numeropreins = numeropreins;
        this.fechapreins = fechapreins;
        this.borrado = borrado;
@@ -37,13 +39,23 @@ public class Preinscrito  implements java.io.Serializable {
        this.examenasistens = examenasistens;
     }
    
-    public Aspirante getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(Aspirante cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+    public Aspirante getAspirante() {
+        return aspirante;
+    }
+
+    public void setAspirante(Aspirante aspirante) {
+        this.aspirante = aspirante;
+    }
+    
+    
     
     public String getNumeropreins() {
         return this.numeropreins;
