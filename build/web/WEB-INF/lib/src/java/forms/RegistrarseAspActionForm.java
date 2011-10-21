@@ -4,11 +4,8 @@
  */
 package forms;
 
-import javax.servlet.http.HttpServletRequest;
 
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionMessage;
+import java.math.BigDecimal;
 import org.apache.struts.validator.ValidatorForm;
 
 /**
@@ -34,8 +31,71 @@ public class RegistrarseAspActionForm extends ValidatorForm {
     private String materiasFalla;
     private String dependenciaEco;
     private String habitosEstudio;
-    private double promedio;
-    
+    private float promedio;
+    private String repnombres;
+    private String repapellidos;
+    private String repcedula;
+    private String replugarTrabajo;
+    private String reptelefonos;
+    private String repgradoEstudio;
+    private String repdireccion;
+
+    public void setRepapellidos(String repapellidos) {
+        this.repapellidos = repapellidos;
+    }
+
+    public void setRepcedula(String repcedula) {
+        this.repcedula = repcedula;
+    }
+
+    public void setRepdireccion(String repdireccion) {
+        this.repdireccion = repdireccion;
+    }
+
+    public void setRepgradoEstudio(String repgradoEstudio) {
+        this.repgradoEstudio = repgradoEstudio;
+    }
+
+    public void setReplugarTrabajo(String replugarTrabajo) {
+        this.replugarTrabajo = replugarTrabajo;
+    }
+
+    public void setRepnombres(String repnombres) {
+        this.repnombres = repnombres;
+    }
+
+    public void setReptelefonos(String reptelefonos) {
+        this.reptelefonos = reptelefonos;
+    }
+
+    public String getRepapellidos() {
+        return repapellidos;
+    }
+
+    public String getRepcedula() {
+        return repcedula;
+    }
+
+    public String getRepdireccion() {
+        return repdireccion;
+    }
+
+    public String getRepgradoEstudio() {
+        return repgradoEstudio;
+    }
+
+    public String getReplugarTrabajo() {
+        return replugarTrabajo;
+    }
+
+    public String getRepnombres() {
+        return repnombres;
+    }
+
+    public String getReptelefonos() {
+        return reptelefonos;
+    }
+
     
     public String getSexo() {
         return sexo;
@@ -83,7 +143,7 @@ public class RegistrarseAspActionForm extends ValidatorForm {
         return plantel;
     }
 
-    public double getPromedio() {
+    public float getPromedio() {
         return promedio;
     }
 
@@ -131,7 +191,7 @@ public class RegistrarseAspActionForm extends ValidatorForm {
         this.plantel = plantel;
     }
 
-    public void setPromedio(double promedio) {
+    public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
 

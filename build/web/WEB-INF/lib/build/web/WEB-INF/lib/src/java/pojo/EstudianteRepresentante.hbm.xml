@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.EstudianteRepresentante" table="estudiante_representante" schema="public">
+        <composite-id name="id" class="pojo.EstudianteRepresentanteId">
+            <key-property name="representado" type="string">
+                <column name="representado" length="11" />
+            </key-property>
+            <key-property name="representante" type="string">
+                <column name="representante" length="11" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="representante" class="pojo.Representante" update="false" insert="false" fetch="select">
+            <column name="representante" length="11" not-null="true" />
+        </many-to-one>
+        <many-to-one name="aspirante" class="pojo.Aspirante" update="false" insert="false" fetch="select">
+            <column name="representado" length="11" not-null="true" />
+        </many-to-one>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+    </class>
+</hibernate-mapping>

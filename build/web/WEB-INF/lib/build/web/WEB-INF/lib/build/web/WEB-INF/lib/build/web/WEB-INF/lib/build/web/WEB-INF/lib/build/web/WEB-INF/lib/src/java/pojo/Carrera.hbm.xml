@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Carrera" table="carrera" schema="public">
+        <id name="codigo" type="string">
+            <column name="codigo" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="64" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="140" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="preinscritocarreras" inverse="true">
+            <key>
+                <column name="carrera" length="10" />
+            </key>
+            <one-to-many class="pojo.Preinscritocarrera" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -8,7 +8,6 @@
 <struts-config>
     <form-beans>
         <form-bean name="BuscarUsuarioActionForm" type="forms.BuscarUsuarioActionForm"/>
-        <form-bean name="RegistrarseAspRepActionForm" type="forms.RegistrarseAspRepActionForm"/>
         <form-bean name="RegistrarseAspActionForm" type="forms.RegistrarseAspActionForm"/>
         <form-bean name="RegistrarseActionForm" type="forms.RegistrarseActionForm"/>
         <form-bean name="LoginActionForm" type="forms.LoginActionForm"/>
@@ -32,7 +31,7 @@
         <action path="/Login" type="org.apache.struts.actions.ForwardAction" parameter="/Login-form.jsp"/>
         <action path="/Registrarse" type="org.apache.struts.actions.ForwardAction" parameter="/Registrarse-form.jsp"/>
         <action path="/RegistrarseAsp" type="org.apache.struts.actions.ForwardAction" parameter="/RegistrarseAsp-form.jsp"/>
-        <action path="/RegistrarseAspRep" type="org.apache.struts.actions.ForwardAction" parameter="/RegistrarseAspRep-form.jsp"/>
+        
         
         <action path="/Login" name="LoginActionForm" input="/LoginUsuario/Login.jsp" scope="session" type="actions.LoginAction">
         <forward name="exito" path="/LoginUsuario/Exito.jsp"/>
@@ -43,18 +42,14 @@
         <action path="/Registrarse" name="RegistrarseActionForm" input="/LoginUsuario/Registrarse.jsp" 
         scope="request" type="actions.RegistrarseAction">
         <forward name="success" path="/LoginUsuario/Exito.jsp"/>
+        <forward name="fallo" path="/LoginUsuario/Fallo.jsp"/>
         </action>
         
         <action path="/RegistrarseAsp" name="RegistrarseAspActionForm" input="/LoginUsuario/RegistrarseAsp.jsp" scope="request" 
         type="actions.RegistrarseAspAction">
         <forward name="bien" path="/LoginUsuario/Exito.jsp"/>
+        <forward name="fallas" path="/LoginUsuario/Fallo.jsp"/>
         </action>
-        
-        <action input="/LoginUsuario/RegistrarseAspRep.jsp" name="RegistrarseAspRepActionForm" 
-        path="/RegistrarseAspRep" scope="request" type="actions.RegistrarseAspRepAction">
-        <forward name="bueno" path="/LoginUsuario/Exito.jsp"/>
-        </action>
-        
         
         <action path="/BuscarUsuario" name="BuscarUsuarioActionForm" input="/LoginUsuario/BuscarUsuario.jsp" scope="request" type="actions.BuscarUsuarioAction">
         <forward name="iniciabusqueda" path="/LoginUsuario/ListarUsuarios.jsp"/>

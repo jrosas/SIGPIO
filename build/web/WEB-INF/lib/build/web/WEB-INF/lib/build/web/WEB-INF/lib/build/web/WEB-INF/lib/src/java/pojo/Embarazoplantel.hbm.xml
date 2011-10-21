@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2011 1:43:00 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Embarazoplantel" table="embarazoplantel" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="plantel" class="pojo.Plantel" fetch="select">
+            <column name="plantel" length="12" />
+        </many-to-one>
+        <property name="tipo" type="string">
+            <column name="tipo" length="10" />
+        </property>
+        <property name="grupo" type="string">
+            <column name="grupo" length="16" />
+        </property>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="cantidad" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+    </class>
+</hibernate-mapping>

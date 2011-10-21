@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2011 2:02:31 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Violenciaplantel" table="violenciaplantel" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="plantel" class="pojo.Plantel" fetch="select">
+            <column name="plantel" length="12" />
+        </many-to-one>
+        <property name="tipoviolencia" type="string">
+            <column name="tipoviolencia" length="12" />
+        </property>
+        <property name="medioviolencia" type="string">
+            <column name="medioviolencia" length="25" />
+        </property>
+        <property name="causaviolencia" type="string">
+            <column name="causaviolencia" length="25" />
+        </property>
+        <property name="grupoagresor" type="string">
+            <column name="grupoagresor" length="25" />
+        </property>
+        <property name="grupovictima" type="string">
+            <column name="grupovictima" length="25" />
+        </property>
+        <property name="consecuencias" type="string">
+            <column name="consecuencias" length="140" />
+        </property>
+        <property name="medidastomadas" type="string">
+            <column name="medidastomadas" length="140" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+    </class>
+</hibernate-mapping>

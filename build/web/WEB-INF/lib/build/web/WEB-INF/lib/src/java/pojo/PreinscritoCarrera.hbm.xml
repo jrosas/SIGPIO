@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 16, 2011 2:22:43 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.PreinscritoCarrera" table="preinscrito_carrera" schema="public">
+        <composite-id name="id" class="pojo.PreinscritoCarreraId">
+            <key-property name="preinscrito" type="string">
+                <column name="preinscrito" length="11" />
+            </key-property>
+            <key-property name="carrera" type="string">
+                <column name="carrera" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="preinscrito" class="pojo.Preinscrito" update="false" insert="false" fetch="select">
+            <column name="preinscrito" length="11" not-null="true" />
+        </many-to-one>
+        <many-to-one name="carrera" class="pojo.Carrera" update="false" insert="false" fetch="select">
+            <column name="carrera" length="10" not-null="true" />
+        </many-to-one>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+    </class>
+</hibernate-mapping>

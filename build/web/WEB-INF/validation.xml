@@ -198,7 +198,7 @@
                     <arg key="RegistrarseAsp.promedio"/>
                     <var>
                         <var-name>mask</var-name>
-                        <var-value>^[0-9]{2}\.[0-9]{2}$</var-value>
+                        <var-value>^[0-9]+$</var-value>
                     </var>
             </field>
         
@@ -256,14 +256,10 @@
                     <arg key="RegistrarseAsp.habitosEstudio"/>
             </field>
 
-
-        </form>
-
-        <form name="RegistrarseAspRepActionForm">
             <field
-                property="email"
+                property="repemail"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.email"/>
+                    <arg key="RegistrarseAsp.repemail"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^\b[a-zA-Z0-9%+-_.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b$</var-value>
@@ -272,9 +268,9 @@
             </field>
             
             <field
-                property="nombres"
+                property="repnombres"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.nombres"/>
+                    <arg key="RegistrarseAsp.repnombres"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^([a-zA-Z]+\s)*[a-zA-Z]+$</var-value>
@@ -283,9 +279,9 @@
             
             
             <field
-                property="apellidos"
+                property="repapellidos"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.apellidos"/>
+                    <arg key="RegistrarseAsp.repapellidos"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^([a-zA-Z]+\s)*[a-zA-Z]+$</var-value>
@@ -293,9 +289,9 @@
             </field>
             
             <field
-                property="cedula"
+                property="repcedula"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.cedula"/>
+                    <arg key="RegistrarseAsp.repcedula"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^[VE]\-[0-9]+$</var-value>
@@ -303,9 +299,9 @@
             </field>
 
             <field
-                property="telefonos"
+                property="reptelefonos"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.telefonos"/>
+                    <arg key="RegistrarseAsp.reptelefonos"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^[0-9]{11}$</var-value>
@@ -314,30 +310,34 @@
             
             
             <field
-                property="direccion"
+                property="repdireccion"
                 depends="required">
-                    <arg key="RegistrarseAspRep.direccion"/>
+                    <arg key="RegistrarseAsp.repdireccion"/>
             </field>
         
                <field
-                property="lugarTrabajo"
+                property="replugarTrabajo"
                 depends="required">
-                    <arg key="RegistrarseAspRep.lugarTrabajo"/>
+                    <arg key="RegistrarseAsp.replugarTrabajo"/>
             </field>
         
         
             <field
-                property="gradoEstudio"
+                property="repgradoEstudio"
                 depends="required,mask">
-                    <arg key="RegistrarseAspRep.gradoEstudio"/>
+                    <arg key="RegistrarseAsp.repgradoEstudio"/>
                     <var>
                         <var-name>mask</var-name>
                         <var-value>^[a-zA-Z]+$</var-value>
                     </var>
             </field>
             
+
+
+
         </form>
 
+        
     </formset>
 
     <!-- An example formset for another locale -->

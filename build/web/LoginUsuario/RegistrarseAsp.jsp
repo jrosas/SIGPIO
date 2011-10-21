@@ -161,16 +161,6 @@
 
 <tr>
 <td>
-<bean:message key="RegistrarseAsp.hermanosUniv" />*
-</td>
-<td>
-<html:text property="hermanosUniv" />
-</td>
-</tr>
-
-
-<tr>
-<td>
 <bean:message key="RegistrarseAsp.dependenciaEco" />*
 </td>
 <td>
@@ -199,7 +189,73 @@
 </tr>
 
 
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.repnombres" />*
+</td>
+<td>
+<html:text property="repnombres" />
+</td>
+</tr>
 
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.repapellidos" />*
+</td>
+<td>
+<html:text property="repapellidos" />
+</td>
+</tr>
+
+
+
+
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.repcedula" />*
+</td>
+<td>
+<html:text property="repcedula" />
+</td>
+</tr>
+
+
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.repgradoEstudio" />*
+</td>
+<td>
+<html:text property="repgradoEstudio" />
+</td>
+</tr>
+
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.replugarTrabajo" />*
+</td>
+<td>
+<html:text property="replugarTrabajo" />
+</td>
+</tr>
+
+
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.reptelefonos" />*
+</td>
+<td>
+<html:text property="reptelefonos" />
+</td>
+</tr>
+
+<tr>
+<td>
+<bean:message key="RegistrarseAsp.repdireccion" />*
+</td>
+<td>
+<html:text property="repdireccion" />
+</td>
+</tr>
 
 
 <tr>

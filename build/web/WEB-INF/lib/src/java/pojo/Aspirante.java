@@ -23,7 +23,7 @@ public class Aspirante  implements java.io.Serializable {
      private String materiasfalla;
      private String dependenciaeco;
      private String habitosestudio;
-     private BigDecimal promedio;
+     private float promedio;
      private String sexo;
      private Boolean borrado;
      private Set<Estudianterepresentante> estudianterepresentantes = new HashSet<Estudianterepresentante>(0);
@@ -36,7 +36,7 @@ public class Aspirante  implements java.io.Serializable {
         this.cedula = usuario;
         
     }
-    public Aspirante(Usuario cedula, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, BigDecimal promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes, Set<Preinscrito> preinscritos) {
+    public Aspirante(Usuario cedula, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, float promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes, Set<Preinscrito> preinscritos) {
        this.cedula = cedula;
        this.plantel = plantel;
        this.nivelingreso = nivelingreso;
@@ -132,11 +132,11 @@ public class Aspirante  implements java.io.Serializable {
     public void setHabitosestudio(String habitosestudio) {
         this.habitosestudio = habitosestudio;
     }
-    public BigDecimal getPromedio() {
+    public float getPromedio() {
         return this.promedio;
     }
     
-    public void setPromedio(BigDecimal promedio) {
+    public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
     public String getSexo() {

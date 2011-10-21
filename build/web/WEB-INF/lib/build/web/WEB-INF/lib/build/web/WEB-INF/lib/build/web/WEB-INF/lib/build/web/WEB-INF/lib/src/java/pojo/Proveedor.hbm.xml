@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Proveedor" table="proveedor" schema="public">
+        <id name="rif" type="string">
+            <column name="rif" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" />
+        </property>
+        <property name="area" type="string">
+            <column name="area" length="16" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="140" />
+        </property>
+        <property name="telefonos" type="string">
+            <column name="telefonos" length="35" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="proveedoreseventos" inverse="true">
+            <key>
+                <column name="rif" length="12" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Proveedoresevento" />
+        </set>
+    </class>
+</hibernate-mapping>

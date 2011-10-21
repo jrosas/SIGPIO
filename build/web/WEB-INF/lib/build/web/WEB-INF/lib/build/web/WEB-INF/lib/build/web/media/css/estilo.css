@@ -1,0 +1,116 @@
+body {
+background-image:url('./images/fondo.jpg');
+background-color:#FFF;
+background-attachment:fixed;
+background-repeat: repeat-x;
+}
+
+#superior {
+background-image:url('./images/fondoUnidos.jpg');
+height:120px;
+width:100%;
+-moz-border-radius:20px;
+-webkit-border-radius:20px;
+border-radius:20px;
+}
+
+#cabecera {
+width:980px;
+height:80px;
+line-height:normal;
+position:relative;
+top:10px;
+margin:0 auto;
+}
+
+#pio {
+width:370px;
+height:60px;
+}
+
+#logo {
+width:90px;
+height:60px;
+}
+
+#letras {
+width:300px;
+height:60px;
+position:relative;
+top:-55px;
+left:90px;
+font-weight:700;
+color:#FFF;
+font-size:14px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+#principal {
+width:500px;
+height:20px;
+position:relative;
+top:-50px;
+left:450px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+padding:10px;
+background-image:url('./images/fondoMenu.png');
+}
+
+#segundario{
+width:650px;
+height: 40px;
+margin: 0 auto;
+line-height:normal;
+position: relative;
+top: -20px;
+}
+
+#cuerpo {
+background-image:url('./images/fondoCuerpo.png');
+width:960px;
+line-height:normal;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+margin:0 auto;
+padding:10px;
+}
+
+#contenedor {
+border:20px;
+margin:20px;
+}
+
+#pie {
+background-color:#000;
+font-size:16px;
+color:#FFF;
+height:40px;
+width:980px;
+text-decoration:none;
+-moz-border-radius:20px;
+-webkit-border-radius:20px;
+border-radius:20px;
+line-height:normal;
+margin:0 auto;
+padding:3px 6px;
+}
+
+#centrar {
+position:relative;
+float:right;
+width:93%;
+top:10px;
+font-size:14px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:700;
+}
+
+#main_nav { position:relative; top:-15px; left: -20px; font-weight:700;}
+#main_nav lu { list-style-type: none;}
+#main_nav li { float:left; margin-left:2px; list-style-type: none;}
+#main_nav li a{ font-size:12px; color:#000; text-decoration:none; padding:6px 12px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;}
+#main_nav li a.active,
+#main_nav li a:hover{  background-color:#212121; color: #FFF; font-weight:700;}

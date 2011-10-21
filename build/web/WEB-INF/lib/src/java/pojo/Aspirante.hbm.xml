@@ -41,7 +41,7 @@
             <column name="habitosestudio" length="100" />
         </property>
         <property name="promedio" type="big_decimal">
-            <column name="promedio" precision="131089" scale="0" />
+            <column name="promedio" precision="131089" scale="0"/>
         </property>
         <property name="sexo" type="string">
             <column name="sexo" length="1" />

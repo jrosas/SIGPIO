@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Plantel" table="plantel" schema="public">
+        <id name="rif" type="string">
+            <column name="rif" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="70" not-null="true" />
+        </property>
+        <property name="distrito" type="string">
+            <column name="distrito" length="30" not-null="true" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="12" not-null="true" />
+        </property>
+        <property name="telefonos" type="string">
+            <column name="telefonos" length="47" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="140" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="30" />
+        </property>
+        <property name="coordnombres" type="string">
+            <column name="coordnombres" length="25" not-null="true" />
+        </property>
+        <property name="coordapellidos" type="string">
+            <column name="coordapellidos" length="25" not-null="true" />
+        </property>
+        <property name="coordtelfs" type="string">
+            <column name="coordtelfs" length="35" not-null="true" />
+        </property>
+        <property name="coordemail" type="string">
+            <column name="coordemail" length="30" not-null="true" />
+        </property>
+        <property name="coordcedula" type="string">
+            <column name="coordcedula" length="11" not-null="true" />
+        </property>
+        <property name="direcnombres" type="string">
+            <column name="direcnombres" length="25" />
+        </property>
+        <property name="direcapellidos" type="string">
+            <column name="direcapellidos" length="25" />
+        </property>
+        <property name="directelfs" type="string">
+            <column name="directelfs" length="35" />
+        </property>
+        <property name="direcemail" type="string">
+            <column name="direcemail" length="30" />
+        </property>
+        <property name="direccedula" type="string">
+            <column name="direccedula" length="11" />
+        </property>
+        <property name="menciones" type="string">
+            <column name="menciones" length="100" not-null="true" />
+        </property>
+        <property name="materiasfalla" type="string">
+            <column name="materiasfalla" length="100" />
+        </property>
+        <property name="programasremit" type="string">
+            <column name="programasremit" length="100" />
+        </property>
+        <property name="danosplanta" type="string">
+            <column name="danosplanta" length="200" />
+        </property>
+        <property name="matricula" type="java.lang.Integer">
+            <column name="matricula" />
+        </property>
+        <property name="asistiocharla" type="java.lang.Boolean">
+            <column name="asistiocharla" />
+        </property>
+        <property name="orientacionfam" type="java.lang.Boolean">
+            <column name="orientacionfam" />
+        </property>
+        <property name="orientacionind" type="java.lang.Boolean">
+            <column name="orientacionind" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="violenciaplantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="pojo.Violenciaplantel" />
+        </set>
+        <set name="embarazoplantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="pojo.Embarazoplantel" />
+        </set>
+        <set name="aspirantes" inverse="true">
+            <key>
+                <column name="plantel" length="12" />
+            </key>
+            <one-to-many class="pojo.Aspirante" />
+        </set>
+        <set name="charlaplantels" inverse="true">
+            <key>
+                <column name="plantel" length="12" />
+            </key>
+            <one-to-many class="pojo.Charlaplantel" />
+        </set>
+    </class>
+</hibernate-mapping>

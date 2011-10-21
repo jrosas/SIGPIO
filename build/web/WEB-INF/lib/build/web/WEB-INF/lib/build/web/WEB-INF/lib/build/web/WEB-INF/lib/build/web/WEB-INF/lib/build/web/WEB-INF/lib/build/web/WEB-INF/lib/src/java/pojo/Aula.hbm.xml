@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2011 12:37:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Aula" table="aula" schema="public">
+        <id name="lugar" type="string">
+            <column name="lugar" length="38" />
+            <generator class="assigned" />
+        </id>
+        <property name="capacidad" type="java.lang.Integer">
+            <column name="capacidad" />
+        </property>
+        <property name="implementos" type="string">
+            <column name="implementos" length="50" />
+        </property>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <set name="clases" inverse="true">
+            <key>
+                <column name="aula" length="38" />
+            </key>
+            <one-to-many class="pojo.Clase" />
+        </set>
+    </class>
+</hibernate-mapping>

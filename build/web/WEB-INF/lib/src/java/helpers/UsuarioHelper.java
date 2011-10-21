@@ -6,6 +6,10 @@ package helpers;
 
 import org.hibernate.Query;
 import hibernate.HibernateUtil;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import org.hibernate.Session;
 import pojo.Usuario;
@@ -39,6 +43,23 @@ public class UsuarioHelper {
     return usuario;
 }
    
+   
+   public Usuario getUsuarioByemaced(String email, String cedula){
+
+    Usuario usuario = null;
+
+    try {
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Usuario as usuario where usuario.email='" + email +"' and usuario.cedula='"+cedula+"'");
+        usuario = (Usuario) q.uniqueResult();
+        
+    } catch (Exception e) {
+        System.out.print("nada");
+    }
+
+    return usuario;
+}
+   
     public List ListarUsuarios(String nombre, String apellido, String cedula, String email) {
         
         List<Usuario> usuarioList = null;
@@ -54,7 +75,21 @@ public class UsuarioHelper {
             System.out.print("uno");
         }
       
+     
         return usuarioList;
     }
+    
+    public void guardar (String nombres, String apellidos, String cedula, String email, String telefonos, String clave, boolean esAd){
+        
+        org.hibernate.Transaction tx = session.beginTransaction();
+        DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+        Date today = Calendar.getInstance().getTime();       
+        String rDate = df.format(today);   
+        
+        Usuario usuar=new Usuario(cedula,nombres,apellidos,email, clave, esAd,rDate,telefonos, false, null);
+        session.save(usuar);
+     
+    }
+    
     
 }

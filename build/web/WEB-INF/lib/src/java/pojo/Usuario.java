@@ -20,10 +20,8 @@ public class Usuario  implements java.io.Serializable {
      private String fecharegistro;
      private String telefonos;
      private Boolean borrado;
-     private Set<Profesor> profesors = new HashSet<Profesor>(0);
-     private Set<Personalpio> personalpios = new HashSet<Personalpio>(0);
      private Set<Mensaje> mensajes = new HashSet<Mensaje>(0);
-     private Set<Aspirante> aspirantes = new HashSet<Aspirante>(0);
+     
 
     public Usuario() {
     }
@@ -36,7 +34,7 @@ public class Usuario  implements java.io.Serializable {
         this.clave = clave;
         this.esadmin = esadmin;
     }
-    public Usuario(String cedula, String nombres, String apellidos, String email, String clave, boolean esadmin, String fecharegistro, String telefonos, Boolean borrado, Set<Profesor> profesors, Set<Personalpio> personalpios, Set<Mensaje> mensajes, Set<Aspirante> aspirantes) {
+    public Usuario(String cedula, String nombres, String apellidos, String email, String clave, boolean esadmin, String fecharegistro, String telefonos, Boolean borrado, Set<Mensaje> mensajes) {
        this.cedula = cedula;
        this.nombres = nombres;
        this.apellidos = apellidos;
@@ -46,10 +44,8 @@ public class Usuario  implements java.io.Serializable {
        this.fecharegistro = fecharegistro;
        this.telefonos = telefonos;
        this.borrado = borrado;
-       this.profesors = profesors;
-       this.personalpios = personalpios;
        this.mensajes = mensajes;
-       this.aspirantes = aspirantes;
+       
     }
    
     public String getCedula() {
@@ -115,20 +111,7 @@ public class Usuario  implements java.io.Serializable {
     public void setBorrado(Boolean borrado) {
         this.borrado = borrado;
     }
-    public Set<Profesor> getProfesors() {
-        return this.profesors;
-    }
     
-    public void setProfesors(Set<Profesor> profesors) {
-        this.profesors = profesors;
-    }
-    public Set<Personalpio> getPersonalpios() {
-        return this.personalpios;
-    }
-    
-    public void setPersonalpios(Set<Personalpio> personalpios) {
-        this.personalpios = personalpios;
-    }
     public Set<Mensaje> getMensajes() {
         return this.mensajes;
     }
@@ -136,16 +119,6 @@ public class Usuario  implements java.io.Serializable {
     public void setMensajes(Set<Mensaje> mensajes) {
         this.mensajes = mensajes;
     }
-    public Set<Aspirante> getAspirantes() {
-        return this.aspirantes;
-    }
-    
-    public void setAspirantes(Set<Aspirante> aspirantes) {
-        this.aspirantes = aspirantes;
-    }
-
-
-
 
 }
 
