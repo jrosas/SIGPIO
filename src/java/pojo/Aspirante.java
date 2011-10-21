@@ -2,7 +2,7 @@ package pojo;
 // Generated Oct 21, 2011 12:21:05 AM by Hibernate Tools 3.2.1.GA
 
 
-import java.math.BigDecimal;
+//import java.math.Float;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,7 +24,7 @@ public class Aspirante  implements java.io.Serializable {
      private String materiasfalla;
      private String dependenciaeco;
      private String habitosestudio;
-     private BigDecimal promedio;
+     private Float promedio;
      private String sexo;
      private Boolean borrado;
      private Set<Estudianterepresentante> estudianterepresentantes = new HashSet<Estudianterepresentante>(0);
@@ -38,7 +38,7 @@ public class Aspirante  implements java.io.Serializable {
         this.cedula = cedula;
         
     }
-    public Aspirante(String cedula,Usuario usuario, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, BigDecimal promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes) {
+    public Aspirante(String cedula,Usuario usuario, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, Float promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes) {
        this.cedula = cedula;
        this.usuario=usuario;
        this.plantel = plantel;
@@ -147,11 +147,11 @@ public class Aspirante  implements java.io.Serializable {
     public void setHabitosestudio(String habitosestudio) {
         this.habitosestudio = habitosestudio;
     }
-    public BigDecimal getPromedio() {
+    public Float getPromedio() {
         return this.promedio;
     }
     
-    public void setPromedio(BigDecimal promedio) {
+    public void setPromedio(Float promedio) {
         this.promedio = promedio;
     }
     public String getSexo() {

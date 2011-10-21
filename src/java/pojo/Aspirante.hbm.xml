@@ -41,8 +41,8 @@
         <property name="habitosestudio" type="string">
             <column name="habitosestudio" length="100" />
         </property>
-        <property name="promedio" type="big_decimal">
-            <column name="promedio" precision="131089" scale="0" />
+        <property name="promedio" type="java.lang.Float">
+            <column name="promedio" precision="8" scale="8"/>
         </property>
         <property name="sexo" type="string">
             <column name="sexo" length="1" />
