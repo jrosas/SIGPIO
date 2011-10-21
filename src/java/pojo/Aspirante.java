@@ -1,5 +1,5 @@
 package pojo;
-// Generated Oct 18, 2011 12:37:12 AM by Hibernate Tools 3.2.1.GA
+// Generated Oct 21, 2011 12:21:05 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;
@@ -12,7 +12,8 @@ import java.util.Set;
 public class Aspirante  implements java.io.Serializable {
 
 
-     private Usuario cedula;
+     private String cedula;
+     private Usuario usuario;
      private Plantel plantel;
      private String nivelingreso;
      private Integer horastrabajo;
@@ -27,17 +28,19 @@ public class Aspirante  implements java.io.Serializable {
      private String sexo;
      private Boolean borrado;
      private Set<Estudianterepresentante> estudianterepresentantes = new HashSet<Estudianterepresentante>(0);
+     
 
     public Aspirante() {
     }
 
 	
-    public Aspirante(Usuario usuario) {
-        this.cedula = usuario;
+    public Aspirante(String cedula) {
+        this.cedula = cedula;
         
     }
-    public Aspirante(Usuario cedula, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, BigDecimal promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes, Set<Preinscrito> preinscritos) {
+    public Aspirante(String cedula,Usuario usuario, Plantel plantel, String nivelingreso, Integer horastrabajo, String beca, Integer hermanosuniv, String servicios, String actividadextr, String materiasfalla, String dependenciaeco, String habitosestudio, BigDecimal promedio, String sexo, Boolean borrado, Set<Estudianterepresentante> estudianterepresentantes) {
        this.cedula = cedula;
+       this.usuario=usuario;
        this.plantel = plantel;
        this.nivelingreso = nivelingreso;
        this.horastrabajo = horastrabajo;
@@ -52,15 +55,27 @@ public class Aspirante  implements java.io.Serializable {
        this.sexo = sexo;
        this.borrado = borrado;
        this.estudianterepresentantes = estudianterepresentantes;
+       
     }
    
-    public Usuario getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
     
-    public void setCedula(Usuario cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+    
+    
     public Plantel getPlantel() {
         return this.plantel;
     }

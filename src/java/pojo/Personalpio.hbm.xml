@@ -7,15 +7,15 @@
         <id name="cedula" type="string">
             <column name="cedula" length="11" />
             <generator class="foreign">
-                <param name="property">cedula</param>
+                <param name="property">usuario</param>
             </generator>
         </id>
+        <one-to-one name="usuario" class="pojo.Usuario" constrained="true"/>
         <property name="cargo" type="string">
             <column name="cargo" length="30" />
         </property>
         <property name="borrado" type="java.lang.Boolean">
             <column name="borrado" />
         </property>
-        <one-to-one name="cedula" class="pojo.Usuario" constrained="true"/>
     </class>
 </hibernate-mapping>
